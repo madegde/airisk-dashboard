@@ -2,7 +2,7 @@
 
 A simple Streamlit app showing the AI Risk of AI companies in the world.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([(https://airisk.streamlit.app/)](https://airisk.streamlit.app/))
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://airisk.streamlit.app/)
 
 
 ### How to run it on your own machine
