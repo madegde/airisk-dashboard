@@ -91,3 +91,61 @@ fig.update_layout(
 
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
+
+''
+''
+# Create a radar chart for each category
+for category in categories:
+    category_data = indicator_df[indicator_df['Risk Category'] == category]
+    
+    fig = go.Figure()
+    
+    # Add a trace for each company
+    for company in companies:
+        company_data = category_data[category_data['Company'] == company]
+        fig.add_trace(go.Scatterpolargl(
+            r=company_data['Standardized Value'],
+            theta=company_data['Risk ID'].astype(str),
+            connectgaps=True,
+            fill='toself',
+            name=company
+        ))
+
+    # Update the layout to move the legend to the bottom
+    fig.update_layout(
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=-0.3,
+            xanchor="center",
+            x=0.5
+        )
+    )
+    
+    # Add annotations for Risk ID and Risk Indicator
+    annotations = []
+    for risk_id, risk_indicator in zip(category_data['Risk ID'].unique(), category_data['Risk Indicator'].unique()):
+        annotations.append(f"{risk_id}: {risk_indicator}")
+    
+    # Update the layout
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(
+                visible=True,
+                range=[0, 300]
+            )),
+        showlegend=True,
+        title=f"Radar Chart for {category}",
+        annotations=[dict(
+            x=1.0,
+            y=1.1,
+            xref="paper",
+            yref="paper",
+            showarrow=False,
+            text="<br>".join(annotations),
+            align="left"
+        )]
+    )
+    
+   # Display the radar chart in Streamlit
+    st.plotly_chart(fig)
