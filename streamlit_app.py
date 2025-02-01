@@ -103,7 +103,7 @@ for category in categories:
     # Add a trace for each company
     for company in companies:
         company_data = category_data[category_data['Company'] == company]
-        fig.add_trace(go.Scatterpolargl(
+        fig.add_trace(go.Scatterpolar(
             r=company_data['Standardized Value'],
             theta=company_data['Risk ID'].astype(str),
             connectgaps=True,
