@@ -63,7 +63,7 @@ selected_companies = st.multiselect(
 
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
-
+companies = category_df['Company'].unique()
 # Create a radar chart
 fig = go.Figure()
 
