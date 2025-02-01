@@ -47,7 +47,7 @@ Lorem ipsum
 ''
 ''
 
-companies = category_df['Company'].unique()
+companies = indicator_df['Company'].unique()
 
 if not len(companies):
     st.warning("Select at least one company")
@@ -62,7 +62,7 @@ selected_companies = st.multiselect(
 ''
 
 # Create a list of unique risk categories
-categories = category_df['Risk Category'].unique()
+categories = indicator_df['Risk Category'].unique()
 
 # Create a radar chart for the selected companies
 fig = go.Figure()
