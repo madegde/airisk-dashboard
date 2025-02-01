@@ -1,0 +1,116 @@
+Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
+1. Competitive behavior/practice,1.01,Valuation growth (%),Google DeepMind,,
+1. Competitive behavior/practice,1.02,Market share (revenue),Google DeepMind,0.07,72.91362859880839
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,,
+1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency),Google DeepMind,,
+1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Google DeepMind,0.0,0.0
+1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Google DeepMind,0.0,0.0
+1. Competitive behavior/practice,1.07,"Total investments made by the company, amount ($)",Google DeepMind,9500000.0,6.043256997455471
+1. Competitive behavior/practice,1.08,"Investments made by the company, count",Google DeepMind,1.0,71.42857142857143
+1. Competitive behavior/practice,1.09,"Revenue growth rate (YoY, %)",Google DeepMind,0.63,43.95987788922809
+1. Competitive behavior/practice,1.1,Anti-competition: News based index,Google DeepMind,133.246764,112.28205326679159
+2. ​Compliance and Safety Practices,2.01,"""Safety"" head-count as a share of total staff",Google DeepMind,0.0027910685805422647,26.06154389481788
+2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Google DeepMind,1.0,27.77777777777778
+2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,150.0
+2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Google DeepMind,1.0,125.0
+3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Google DeepMind,1.0,166.66666666666669
+3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Google DeepMind,0.0,0.0
+3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Google DeepMind,0.0,
+3. Commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Google DeepMind,80.29222837209302,137.5427992762629
+4. Incidents,4.01,AI-related incidents,Google DeepMind,44.0,118.91891891891892
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Google DeepMind,0.0,0.0
+4. Incidents,4.03,Litigation Frequency where company is defendant,Google DeepMind,6.0,115.38461538461537
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Google DeepMind,1.0,20.833333333333336
+4. Incidents,4.05,Outsourcing incidents,Google DeepMind,0.0,0.0
+1. Competitive behavior/practice,1.01,Valuation growth (%),Anthropic,60000000000.0,67.41573033707866
+1. Competitive behavior/practice,1.02,Market share (revenue),Anthropic,0.02,20.83246531394525
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Anthropic,,
+1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency),Anthropic,,
+1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Anthropic,0.0,0.0
+1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Anthropic,0.0,0.0
+1. Competitive behavior/practice,1.07,"Total investments made by the company, amount ($)",Anthropic,10000000.0,6.361323155216285
+1. Competitive behavior/practice,1.08,"Investments made by the company, count",Anthropic,1.0,71.42857142857143
+1. Competitive behavior/practice,1.09,"Revenue growth rate (YoY, %)",Anthropic,3.57,249.1059747056258
+1. Competitive behavior/practice,1.1,Anti-competition: News based index,Anthropic,100.0,84.26625149920459
+2. ​Compliance and Safety Practices,2.01,"""Safety"" head-count as a share of total staff",Anthropic,0.021570319240724764,201.41240012388525
+2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Anthropic,6.0,166.66666666666666
+2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,150.0
+2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Anthropic,1.0,125.0
+3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Anthropic,1.0,166.66666666666669
+3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Anthropic,1.0,500.0
+3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Anthropic,0.0,
+3. Commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Anthropic,90.44160093023255,154.9289540866006
+4. Incidents,4.01,AI-related incidents,Anthropic,2.0,5.405405405405405
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Anthropic,0.0,0.0
+4. Incidents,4.03,Litigation Frequency where company is defendant,Anthropic,1.0,19.23076923076923
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Anthropic,0.0,0.0
+4. Incidents,4.05,Outsourcing incidents,Anthropic,0.0,0.0
+1. Competitive behavior/practice,1.01,Valuation growth (%),Meta AI,,
+1. Competitive behavior/practice,1.02,Market share (revenue),Meta AI,1e-05,0.010416232656972627
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Meta AI,,
+1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency),Meta AI,,
+1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Meta AI,2.0,166.66666666666669
+1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Meta AI,16300000000.0,397.1009196662403
+1. Competitive behavior/practice,1.07,"Total investments made by the company, amount ($)",Meta AI,0.0,0.0
+1. Competitive behavior/practice,1.08,"Investments made by the company, count",Meta AI,0.0,0.0
+1. Competitive behavior/practice,1.09,"Revenue growth rate (YoY, %)",Meta AI,0.22,15.351068469254253
+1. Competitive behavior/practice,1.1,Anti-competition: News based index,Meta AI,,
+2. ​Compliance and Safety Practices,2.01,"""Safety"" head-count as a share of total staff",Meta AI,0.012857142857142857,120.05329975384267
+2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Meta AI,2.0,55.55555555555556
+2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,83.33333333333334
+2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Meta AI,1.0,125.0
+3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Meta AI,0.0,0.0
+3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Meta AI,0.0,0.0
+3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Meta AI,0.0,
+3. Commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Meta AI,47.1430888372093,80.75740998431431
+4. Incidents,4.01,AI-related incidents,Meta AI,89.0,240.54054054054052
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Meta AI,0.0,0.0
+4. Incidents,4.03,Litigation Frequency where company is defendant,Meta AI,1.0,19.23076923076923
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Meta AI,1.0,20.833333333333336
+4. Incidents,4.05,Outsourcing incidents,Meta AI,0.0,0.0
+1. Competitive behavior/practice,1.01,Valuation growth (%),x.AI,50000000000.0,56.17977528089888
+1. Competitive behavior/practice,1.02,Market share (revenue),x.AI,1e-05,0.010416232656972627
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),x.AI,,
+1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency),x.AI,,
+1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",x.AI,1.0,83.33333333333334
+1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",x.AI,,
+1. Competitive behavior/practice,1.07,"Total investments made by the company, amount ($)",x.AI,0.0,0.0
+1. Competitive behavior/practice,1.08,"Investments made by the company, count",x.AI,0.0,0.0
+1. Competitive behavior/practice,1.09,"Revenue growth rate (YoY, %)",x.AI,,
+1. Competitive behavior/practice,1.1,Anti-competition: News based index,x.AI,100.0,84.26625149920459
+2. ​Compliance and Safety Practices,2.01,"""Safety"" head-count as a share of total staff",x.AI,0.01,93.3747886974332
+2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,0.0
+2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,0.0
+2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
+3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,0.0
+3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,0.0
+3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,
+3. Commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,x.AI,0.0,0.0
+4. Incidents,4.01,AI-related incidents,x.AI,14.0,37.83783783783784
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),x.AI,0.0,0.0
+4. Incidents,4.03,Litigation Frequency where company is defendant,x.AI,0.0,0.0
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),x.AI,4.0,83.33333333333334
+4. Incidents,4.05,Outsourcing incidents,x.AI,0.0,0.0
+1. Competitive behavior/practice,1.01,Valuation growth (%),OpenAI,157000000000.0,176.40449438202248
+1. Competitive behavior/practice,1.02,Market share (revenue),OpenAI,0.39,406.2330736219324
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),OpenAI,,
+1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency),OpenAI,,
+1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",OpenAI,3.0,250.0
+1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",OpenAI,119000000.0,2.8990803337596684
+1. Competitive behavior/practice,1.07,"Total investments made by the company, amount ($)",OpenAI,766500000.0,487.59541984732823
+1. Competitive behavior/practice,1.08,"Investments made by the company, count",OpenAI,5.0,357.14285714285717
+1. Competitive behavior/practice,1.09,"Revenue growth rate (YoY, %)",OpenAI,1.3125,91.58307893589185
+1. Competitive behavior/practice,1.1,Anti-competition: News based index,OpenAI,141.439119,119.18544373479926
+2. ​Compliance and Safety Practices,2.01,"""Safety"" head-count as a share of total staff",OpenAI,0.006329113924050633,59.09796753002101
+2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,OpenAI,9.0,250.0
+2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,116.66666666666667
+2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,OpenAI,1.0,125.0
+3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,OpenAI,1.0,166.66666666666669
+3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,OpenAI,0.0,0.0
+3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,OpenAI,0.0,
+3. Commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,OpenAI,74.00396837209303,126.77083665282221
+4. Incidents,4.01,AI-related incidents,OpenAI,36.0,97.2972972972973
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),OpenAI,2.0,500.0
+4. Incidents,4.03,Litigation Frequency where company is defendant,OpenAI,18.0,346.15384615384613
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),OpenAI,18.0,375.0
+4. Incidents,4.05,Outsourcing incidents,OpenAI,1.0,500.0
