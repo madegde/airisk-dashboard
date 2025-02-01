@@ -105,7 +105,7 @@ for category in categories:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolar(
             r=company_data['Standardized Value'],
-            theta=company_data['Risk ID'].astype(str),  # Ensure Risk ID is treated as a string
+            theta=company_data['Risk Indicator'].astype(str),  # Ensure Risk ID is treated as a string
             connectgaps=True,
             fill='toself',
             name=company
@@ -132,7 +132,7 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 300]
+                range=[0, 500]
             )),
         showlegend=True,
         title=f"Radar Chart for {category}",
