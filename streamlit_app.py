@@ -28,12 +28,11 @@ def get_risk_data():
 
     DATA_FILENAME2 = Path('data/riskindicators_table.csv')
     risk_indicator_df = pd.read_csv(DATA_FILENAME2)
-    risk_indicator_df['Risk ID'] = risk_indicator_df['Risk ID'].astype(str)
 
     return risk_category_df, risk_indicator_df
 
 category_df, indicator_df = get_risk_data()
-
+indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
 
@@ -48,7 +47,7 @@ Lorem ipsum
 ''
 ''
 
-companies = indicator_df['Company'].unique()
+companies = category_df['Company'].unique()
 
 if not len(companies):
     st.warning("Select at least one company")
@@ -63,7 +62,7 @@ selected_companies = st.multiselect(
 ''
 
 # Create a list of unique risk categories
-categories = indicator_df['Risk Category'].unique()
+categories = category_df['Risk Category'].unique()
 
 # Create a radar chart for the selected companies
 fig = go.Figure()
@@ -106,7 +105,7 @@ for category in categories:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolar(
             r=company_data['Standardized Value'],
-            theta=company_data['Risk ID'].astype(str),
+            theta=company_data['Risk ID'].astype(str),  # Ensure Risk ID is treated as a string
             connectgaps=True,
             fill='toself',
             name=company
@@ -136,7 +135,7 @@ for category in categories:
                 range=[0, 300]
             )),
         showlegend=True,
-        title=f"Risk Index for {category}",
+        title=f"Radar Chart for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
