@@ -63,8 +63,8 @@ selected_companies = st.multiselect(
 
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
-companies = category_df['Company'].unique()
-# Create a radar chart
+
+# Create a radar chart for the selected companies
 fig = go.Figure()
 
 # Add a trace for each selected company
@@ -72,7 +72,7 @@ for company in selected_companies:
     company_data = category_df[category_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Standardized Value'],
-        theta=categories,
+        theta=company_data['Risk Category'],
         connectgaps=True,
         fill='toself',
         name=company
@@ -100,8 +100,8 @@ for category in categories:
     
     fig = go.Figure()
     
-    # Add a trace for each company
-    for company in companies:
+    # Add a trace for each selected company
+    for company in selected_companies:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolargl(
             r=company_data['Standardized Value'],
@@ -147,5 +147,5 @@ for category in categories:
         )]
     )
     
-   # Display the radar chart in Streamlit
+    # Display the radar chart in Streamlit
     st.plotly_chart(fig)
