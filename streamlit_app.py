@@ -28,6 +28,7 @@ def get_risk_data():
 
     DATA_FILENAME2 = Path('data/riskindicators_table.csv')
     risk_indicator_df = pd.read_csv(DATA_FILENAME2)
+    risk_indicator_df['Risk ID'] = risk_indicator_df['Risk ID'].astype(str)
 
     return risk_category_df, risk_indicator_df
 
@@ -105,7 +106,7 @@ for category in categories:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolargl(
             r=company_data['Standardized Value'],
-            theta=company_data['Risk ID'].astype(str),  # Ensure Risk ID is treated as a string
+            theta=company_data['Risk ID'].astype(str),
             connectgaps=True,
             fill='toself',
             name=company
@@ -135,7 +136,7 @@ for category in categories:
                 range=[0, 300]
             )),
         showlegend=True,
-        title=f"Radar Chart for {category}",
+        title=f"Risk Index for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
