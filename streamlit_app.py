@@ -135,7 +135,7 @@ for category in categories:
                 range=[0, 500]
             )),
         showlegend=True,
-        title=f"Radar Chart for {category}",
+        title=f"Risk Index for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
