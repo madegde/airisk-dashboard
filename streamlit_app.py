@@ -2,19 +2,20 @@ import streamlit as st
 import pandas as pd
 import math
 from pathlib import Path
+import plotly.graph_objects as go
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='GDP dashboard',
-    page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
+    page_title='AI Risk dashboard',
+    page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
 )
 
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
 @st.cache_data
-def get_gdp_data():
-    """Grab GDP data from a CSV file.
+def get_risk_data():
+    """Grab risk data from CSV files.
 
     This uses caching to avoid having to read the file every time. If we were
     reading from an HTTP endpoint instead of a file, it's a good idea to set
@@ -22,130 +23,71 @@ def get_gdp_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
-    raw_gdp_df = pd.read_csv(DATA_FILENAME)
+    DATA_FILENAME1 = Path('data/risk_category.csv')
+    risk_category_df = pd.read_csv(DATA_FILENAME1)
 
-    MIN_YEAR = 1960
-    MAX_YEAR = 2022
+    DATA_FILENAME2 = Path('data/riskindicators_table.csv')
+    risk_indicator_df = pd.read_csv(DATA_FILENAME2)
 
-    # The data above has columns like:
-    # - Country Name
-    # - Country Code
-    # - [Stuff I don't care about]
-    # - GDP for 1960
-    # - GDP for 1961
-    # - GDP for 1962
-    # - ...
-    # - GDP for 2022
-    #
-    # ...but I want this instead:
-    # - Country Name
-    # - Country Code
-    # - Year
-    # - GDP
-    #
-    # So let's pivot all those year-columns into two: Year and GDP
-    gdp_df = raw_gdp_df.melt(
-        ['Country Code'],
-        [str(x) for x in range(MIN_YEAR, MAX_YEAR + 1)],
-        'Year',
-        'GDP',
-    )
+    return risk_category_df, risk_indicator_df
 
-    # Convert years from string to integers
-    gdp_df['Year'] = pd.to_numeric(gdp_df['Year'])
+category_df, indicator_df = get_risk_data()
 
-    return gdp_df
-
-gdp_df = get_gdp_data()
-
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------- 
 # Draw the actual page
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_americas: GDP dashboard
+# :earth_asia: AI Risk dashboard
 
-Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
-notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
-But it's otherwise a great (and did I mention _free_?) source of data.
+Lorem ipsum
 '''
 
 # Add some spacing
 ''
 ''
 
-min_value = gdp_df['Year'].min()
-max_value = gdp_df['Year'].max()
+companies = category_df['Company'].unique()
 
-from_year, to_year = st.slider(
-    'Which years are you interested in?',
-    min_value=min_value,
-    max_value=max_value,
-    value=[min_value, max_value])
+if not len(companies):
+    st.warning("Select at least one company")
 
-countries = gdp_df['Country Code'].unique()
-
-if not len(countries):
-    st.warning("Select at least one country")
-
-selected_countries = st.multiselect(
-    'Which countries would you like to view?',
-    countries,
-    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])
+selected_companies = st.multiselect(
+    'Which company would you like to view?',
+    companies,
+    ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
 
 ''
 ''
 ''
 
-# Filter the data
-filtered_gdp_df = gdp_df[
-    (gdp_df['Country Code'].isin(selected_countries))
-    & (gdp_df['Year'] <= to_year)
-    & (from_year <= gdp_df['Year'])
-]
+# Create a list of unique risk categories
+categories = category_df['Risk Category'].unique()
 
-st.header('GDP over time', divider='gray')
+# Create a radar chart
+fig = go.Figure()
 
-''
+# Add a trace for each selected company
+for company in selected_companies:
+    company_data = category_df[category_df['Company'] == company]
+    fig.add_trace(go.Scatterpolar(
+        r=company_data['Standardized Value'],
+        theta=categories,
+        connectgaps=True,
+        fill='toself',
+        name=company
+    ))
 
-st.line_chart(
-    filtered_gdp_df,
-    x='Year',
-    y='GDP',
-    color='Country Code',
+# Update the layout
+fig.update_layout(
+    polar=dict(
+        radialaxis=dict(
+            visible=True,
+            range=[0, 400]
+        )),
+    showlegend=True,
+    title="Risk Index based on Category"
 )
 
-''
-''
-
-
-first_year = gdp_df[gdp_df['Year'] == from_year]
-last_year = gdp_df[gdp_df['Year'] == to_year]
-
-st.header(f'GDP in {to_year}', divider='gray')
-
-''
-
-cols = st.columns(4)
-
-for i, country in enumerate(selected_countries):
-    col = cols[i % len(cols)]
-
-    with col:
-        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
-        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
-
-        if math.isnan(first_gdp):
-            growth = 'n/a'
-            delta_color = 'off'
-        else:
-            growth = f'{last_gdp / first_gdp:,.2f}x'
-            delta_color = 'normal'
-
-        st.metric(
-            label=f'{country} GDP',
-            value=f'{last_gdp:,.0f}B',
-            delta=growth,
-            delta_color=delta_color
-        )
+# Display the radar chart in Streamlit
+st.plotly_chart(fig)
