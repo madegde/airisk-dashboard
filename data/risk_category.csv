@@ -1,9 +1,9 @@
 Risk Category,Company,Standardized Value
-1. Competitive behavior/practice,Anthropic,62.426289554955254
-1. Competitive behavior/practice,Google DeepMind,43.80391259726499
-1. Competitive behavior/practice,Meta AI,96.52151183913638
-1. Competitive behavior/practice,OpenAI,236.3804309998239
-1. Competitive behavior/practice,x.AI,37.2982960576823
+1. Competitive behavior/practice,Anthropic,95.25470200645677
+1. Competitive behavior/practice,Google DeepMind,78.95562717781007
+1. Competitive behavior/practice,Meta AI,33.63219559022869
+1. Competitive behavior/practice,OpenAI,229.04728797268763
+1. Competitive behavior/practice,x.AI,33.598337055070346
 2. ​Compliance and Safety Practices,Anthropic,160.76976669763798
 2. ​Compliance and Safety Practices,Google DeepMind,82.20983041814891
 2. ​Compliance and Safety Practices,Meta AI,95.9855471606829
@@ -14,8 +14,8 @@ Risk Category,Company,Standardized Value
 3. Commitment to emerging standards,Meta AI,26.919136661438102
 3. Commitment to emerging standards,OpenAI,97.8125011064963
 3. Commitment to emerging standards,x.AI,0.0
-4. Incidents,Anthropic,4.9272349272349265
-4. Incidents,Google DeepMind,51.02737352737353
-4. Incidents,Meta AI,56.12092862092861
-4. Incidents,OpenAI,363.6902286902287
-4. Incidents,x.AI,24.234234234234236
+4. Incidents,Anthropic,6.255792400370714
+4. Incidents,Google DeepMind,45.31587890021625
+4. Incidents,Meta AI,34.518844609206056
+4. Incidents,OpenAI,380.37534754402225
+4. Incidents,x.AI,33.53413654618474
