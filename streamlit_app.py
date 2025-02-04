@@ -38,9 +38,9 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_asia: AI Risk dashboard
+# :earth_asia: AI Risk Dashboard
 
-Lorem ipsum
+Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''
 
 # Add some spacing
