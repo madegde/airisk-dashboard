@@ -10,6 +10,9 @@ st.set_page_config(
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
 )
 
+# Sidebar controls
+with st.sidebar:
+    st.title("Future Dashboard")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
