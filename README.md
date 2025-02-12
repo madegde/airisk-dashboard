@@ -16,5 +16,5 @@ A simple Streamlit app showing the AI Risk of AI companies in the world.
 2. Run the app
 
    ```
-   $ streamlit run streamlit_app.py
+   $ streamlit run AI_Risk_Dashboard.py
    ```
