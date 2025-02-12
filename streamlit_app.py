@@ -109,7 +109,7 @@ for i, company in enumerate(selected_companies):
     company_data = category_df[category_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Standardized Value'],
-        theta=company_data['Risk Category'],
+        theta=[cat[0] for cat in company_data['Risk Category']],
         connectgaps=True,
         fill='toself',
         name=company
