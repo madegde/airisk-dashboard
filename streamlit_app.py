@@ -11,7 +11,9 @@ st.set_page_config(
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
     layout="wide",
 )
-
+# Sidebar controls
+with st.sidebar:
+    st.title("AI Risk Dashboard")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
