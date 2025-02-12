@@ -107,9 +107,17 @@ fig = make_subplots(
 # Add a trace for each company in its respective subplot
 for i, company in enumerate(selected_companies):
     company_data = category_df[category_df['Company'] == company]
+    company_data = company_data.replace({
+        'Risk Category': {
+            '1. Competitive behavior/practice': 'Behaviour',
+            '2. \u200bCompliance and Safety Practices': 'Safety',
+            '3. Commitment to emerging standards': 'Standards',
+            '4. Incidents': 'Incident'
+        }
+    })
     fig.add_trace(go.Scatterpolar(
         r=company_data['Standardized Value'],
-        theta=[cat[:3] for cat in company_data['Risk Category']],
+        theta=company_data['Risk Category'],
         connectgaps=True,
         fill='toself',
         name=company
