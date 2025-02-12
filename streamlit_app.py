@@ -98,13 +98,13 @@ st.plotly_chart(fig)
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
-    cols=len(companies), 
-    subplot_titles=[f"{company}" for company in companies], 
+    cols=len(selected_companies), 
+    subplot_titles=[f"{company}" for company in selected_companies], 
     specs=[[{'type': 'polar'}] * len(companies)]
 )
 
 # Add a trace for each company in its respective subplot
-for i, company in enumerate(companies):
+for i, company in enumerate(selected_companies):
     company_data = category_df[category_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Standardized Value'],
@@ -119,7 +119,7 @@ for annotation in fig['layout']['annotations']:
     annotation['y'] += 0.1  
 
 # Update the layout
-for j in range(1, len(companies) + 1):
+for j in range(1, len(selected_companies) + 1):
     fig.update_layout(**{f'polar{j}': dict(
         radialaxis=dict(
             visible=True,
