@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 st.set_page_config(
     page_title='AI Risk dashboard',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
+    layout="wide",
 )
 
 # ----------------------------------------------------------------------------- 
@@ -92,6 +93,50 @@ fig.update_layout(
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
 
+''
+''
+# Create a subplot with 1 row and multiple columns (one for each company)
+fig = make_subplots(
+    rows=1, 
+    cols=len(companies), 
+    subplot_titles=[f"{company}" for company in companies], 
+    specs=[[{'type': 'polar'}] * len(companies)]
+)
+
+# Add a trace for each company in its respective subplot
+for i, company in enumerate(companies):
+    company_data = category_df[category_df['Company'] == company]
+    fig.add_trace(go.Scatterpolar(
+        r=company_data['Standardized Value'],
+        theta=company_data['Risk Category'],
+        connectgaps=True,
+        fill='toself',
+        name=company
+    ), row=1, col=i+1)
+
+# Adjust the position of the subplot titles
+for annotation in fig['layout']['annotations']:
+    annotation['y'] += 0.1  
+
+# Update the layout
+for j in range(1, len(companies) + 1):
+    fig.update_layout(**{f'polar{j}': dict(
+        radialaxis=dict(
+            visible=True,
+            range=[0, 400]
+        ),
+        angularaxis=dict(
+            rotation=90
+        ))
+    })
+
+fig.update_layout(
+    width=3500,  # Adjust width as needed
+    showlegend=False,
+    # title="Risk Index based on Category for Each Company"
+)
+
+st.plotly_chart(fig)
 ''
 ''
 # Create a radar chart for each category
