@@ -101,7 +101,7 @@ fig = make_subplots(
     rows=1, 
     cols=len(selected_companies), 
     subplot_titles=[f"{company}" for company in selected_companies], 
-    specs=[[{'type': 'polar'}] * len(companies)]
+    specs=[[{'type': 'polar'}] * len(selected_companies)]
 )
 
 # Add a trace for each company in its respective subplot
@@ -140,7 +140,8 @@ for j in range(1, len(selected_companies) + 1):
     })
 
 fig.update_layout(
-    width=3500,  # Adjust width as needed
+    width=300*len(selected_companies),
+    height=600,
     showlegend=False,
     # title="Risk Index based on Category for Each Company"
 )
