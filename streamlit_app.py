@@ -141,7 +141,7 @@ for j in range(1, len(selected_companies) + 1):
 
 fig.update_layout(
     width=300*len(selected_companies),
-    height=360,
+    height=300 + 250/len(selected_companies),
     showlegend=False,
     # title="Risk Index based on Category for Each Company"
 )
