@@ -3,16 +3,17 @@ import pandas as pd
 import math
 from pathlib import Path
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='AI Risk dashboard',
+    page_title='Extended AI Risk Dashboard',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
+    layout="wide",
 )
-
 # Sidebar controls
 with st.sidebar:
-    st.title("Future Dashboard")
+    st.title("Extended Version")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
@@ -26,15 +27,18 @@ def get_risk_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME1 = Path('data/risk_category.csv')
+    DATA_FILENAME1 = Path('data/risk_category_std.csv')
     risk_category_df = pd.read_csv(DATA_FILENAME1)
 
-    DATA_FILENAME2 = Path('data/riskindicators_table.csv')
+    DATA_FILENAME2 = Path('data/riskindicators_table_std.csv')
     risk_indicator_df = pd.read_csv(DATA_FILENAME2)
 
-    return risk_category_df, risk_indicator_df
+    DATA_FILENAME3 = Path('data/risk_company_std.csv')
+    risk_company_df = pd.read_csv(DATA_FILENAME3)
 
-category_df, indicator_df = get_risk_data()
+    return risk_category_df, risk_indicator_df, risk_company_df
+
+category_df, indicator_df, risk_company_df = get_risk_data()
 indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
@@ -46,10 +50,61 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''
 
-# Add some spacing
+
 ''
 ''
 
+col1, col2 = st.columns([3, 3], vertical_alignment='center')
+
+with col1:
+    st.subheader("Table Risk Index")
+    # Sort the DataFrame by 'Standardized Value' in descending order
+    sorted_risk_company_df = risk_company_df.sort_values(by='Standardized Value', ascending=False)
+
+    # Create a table
+    table = go.Figure(data=[go.Table(
+        header=dict(values=['Company', 'Risk Index'],
+                    fill_color='paleturquoise',
+                    align='center'),
+        cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
+                fill_color='lavender',
+                align='center'))
+    ])
+
+    # Update the layout
+    table.update_layout(
+        # title=None,
+        autosize=True,
+        width=500
+    )
+
+    # Show the table
+    st.plotly_chart(table)
+
+with col2:
+    st.subheader("Risk by Company")
+    # Create a horizontal bar chart
+    fig = go.Figure(data=[
+        go.Bar(
+            name='Risk Index', 
+            x=risk_company_df['Standardized Value'], 
+            y=risk_company_df['Company'], 
+            orientation='h',
+            text=risk_company_df.index + 1,  # Add rank as text
+            textposition='auto'
+        )
+    ])
+
+    # Update the layout to remove x-axis and show y-axis with company names
+    fig.update_layout(
+        # title=None,
+        xaxis=dict(showgrid=False, zeroline=False, visible=False),
+        yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
+        template='plotly_white'
+    )
+    st.plotly_chart(fig)
+''
+''
 companies = category_df['Company'].unique()
 
 if not len(companies):
@@ -62,8 +117,6 @@ selected_companies = st.multiselect(
 
 ''
 ''
-''
-
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
 
@@ -87,7 +140,11 @@ fig.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 400]
-        )),
+        ),
+        angularaxis=dict(
+            rotation=90
+        )
+    ),
     showlegend=True,
     title="Risk Index based on Category"
 )
@@ -95,6 +152,59 @@ fig.update_layout(
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
 
+''
+''
+# Create a subplot with 1 row and multiple columns (one for each company)
+fig = make_subplots(
+    rows=1, 
+    cols=len(selected_companies), 
+    subplot_titles=[f"{company}" for company in selected_companies], 
+    specs=[[{'type': 'polar'}] * len(selected_companies)]
+)
+
+# Add a trace for each company in its respective subplot
+for i, company in enumerate(selected_companies):
+    company_data = category_df[category_df['Company'] == company]
+    company_data = company_data.replace({
+        'Risk Category': {
+            '1. Competitive behavior/practice': 'Behaviour',
+            '2. \u200bCompliance and Safety Practices': 'Safety',
+            '3. Commitment to emerging standards': 'Standards',
+            '4. Incidents': 'Incident'
+        }
+    })
+    fig.add_trace(go.Scatterpolar(
+        r=company_data['Standardized Value'],
+        theta=company_data['Risk Category'],
+        connectgaps=True,
+        fill='toself',
+        name=company
+    ), row=1, col=i+1)
+
+# Adjust the position of the subplot titles
+for annotation in fig['layout']['annotations']:
+    annotation['y'] += 0.1  
+
+# Update the layout
+for j in range(1, len(selected_companies) + 1):
+    fig.update_layout(**{f'polar{j}': dict(
+        radialaxis=dict(
+            visible=True,
+            range=[0, 400]
+        ),
+        angularaxis=dict(
+            rotation=90
+        ))
+    })
+
+fig.update_layout(
+    width=300*len(selected_companies),
+    height=300 + 250/len(selected_companies),
+    showlegend=False,
+    # title="Risk Index based on Category for Each Company"
+)
+
+st.plotly_chart(fig)
 ''
 ''
 # Create a radar chart for each category
@@ -135,10 +245,12 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 500]
-            )),
+                range=[0, 500]),
+        angularaxis=dict(
+            rotation=90
+        )),
         showlegend=True,
-        title=f"Risk Index for {category}",
+        title=f"Risk Chart for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
