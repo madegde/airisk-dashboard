@@ -193,12 +193,12 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 500],
+                range=[0, 500]),
         angularaxis=dict(
             rotation=90
         )),
         showlegend=True,
-        title=f"Risk Index for {category}",
+        title=f"Risk Chart for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
