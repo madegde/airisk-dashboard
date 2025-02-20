@@ -269,3 +269,4 @@ for category in categories:
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
+    ''

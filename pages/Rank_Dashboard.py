@@ -230,3 +230,4 @@ for category in rank_cat:
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
+''
