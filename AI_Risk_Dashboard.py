@@ -50,26 +50,13 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''
 
-# Add some spacing
-''
-''
-
-companies = category_df['Company'].unique()
-
-if not len(companies):
-    st.warning("Select at least one company")
-
-selected_companies = st.multiselect(
-    'Which company would you like to view?',
-    companies,
-    ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
 
 ''
 ''
 # Create a horizontal bar chart
 fig = go.Figure(data=[
     go.Bar(
-        name='Standardized Value', 
+        name='Risk Index', 
         x=risk_company_df['Standardized Value'], 
         y=risk_company_df['Company'], 
         orientation='h',
@@ -86,6 +73,43 @@ fig.update_layout(
     template='plotly_white'
 )
 st.plotly_chart(fig)
+''
+''
+# Sort the DataFrame by 'Standardized Value' in descending order
+sorted_risk_company_df = risk_company_df.sort_values(by='Standardized Value', ascending=False)
+
+# Create a table
+table = go.Figure(data=[go.Table(
+    header=dict(values=['Company', 'Risk Index'],
+                fill_color='paleturquoise',
+                align='center'),
+    cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
+               fill_color='lavender',
+               align='center'))
+])
+
+# Update the layout
+table.update_layout(
+    title='Risk Index by Company',
+    autosize=True,
+    width=500
+)
+
+# Show the table
+st.plotly_chart(table)
+''
+''
+
+companies = category_df['Company'].unique()
+
+if not len(companies):
+    st.warning("Select at least one company")
+
+selected_companies = st.multiselect(
+    'Which company would you like to view?',
+    companies,
+    ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
+
 ''
 ''
 # Create a list of unique risk categories
