@@ -12,6 +12,11 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Google DeepMind,1.0,27.77777777777778
 2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,150.0
 2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Google DeepMind,1.0,125.0
+2. ​Compliance and Safety Practices,2.05,Risk Assessment*,Google DeepMind,2.1,125.44802867383513
+2. ​Compliance and Safety Practices,2.06,Current Safety Levels*,Google DeepMind,2.5,136.01741022850925
+2. ​Compliance and Safety Practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Google DeepMind,0.8,98.28009828009829
+2. ​Compliance and Safety Practices,2.08,Governance & Accountability*,Google DeepMind,1.68,121.73913043478262
+2. ​Compliance and Safety Practices,2.09,Transparency & Communications*,Google DeepMind,1.13,96.25212947189097
 3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Google DeepMind,1.0,166.66666666666669
 3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Google DeepMind,1.0,166.66666666666669
 3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Google DeepMind,0.0,
@@ -32,6 +37,11 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Anthropic,6.0,166.66666666666666
 2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,150.0
 2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Anthropic,1.0,125.0
+2. ​Compliance and Safety Practices,2.05,Risk Assessment*,Anthropic,2.67,159.49820788530468
+2. ​Compliance and Safety Practices,2.06,Current Safety Levels*,Anthropic,2.83,153.9717083786725
+2. ​Compliance and Safety Practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Anthropic,1.67,205.1597051597051
+2. ​Compliance and Safety Practices,2.08,Governance & Accountability*,Anthropic,2.42,175.36231884057972
+2. ​Compliance and Safety Practices,2.09,Transparency & Communications*,Anthropic,1.63,138.84156729131178
 3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Anthropic,1.0,166.66666666666669
 3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Anthropic,1.0,166.66666666666669
 3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Anthropic,0.0,
@@ -52,6 +62,11 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,Meta AI,2.0,55.55555555555556
 2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,83.33333333333334
 2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,Meta AI,1.0,125.0
+2. ​Compliance and Safety Practices,2.05,Risk Assessment*,Meta AI,1.5,89.6057347670251
+2. ​Compliance and Safety Practices,2.06,Current Safety Levels*,Meta AI,1.18,64.20021762785638
+2. ​Compliance and Safety Practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Meta AI,0.35,42.99754299754299
+2. ​Compliance and Safety Practices,2.08,Governance & Accountability*,Meta AI,0.8,57.97101449275364
+2. ​Compliance and Safety Practices,2.09,Transparency & Communications*,Meta AI,0.0,0.0
 3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Meta AI,0.0,0.0
 3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Meta AI,0.0,0.0
 3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Meta AI,0.0,
@@ -72,6 +87,11 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,0.0
 2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,0.0
 2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
+2. ​Compliance and Safety Practices,2.05,Risk Assessment*,x.AI,0.0,0.0
+2. ​Compliance and Safety Practices,2.06,Current Safety Levels*,x.AI,1.0,54.40696409140371
+2. ​Compliance and Safety Practices,2.07,Quality of Responsible Scaling Policy (RSP)*,x.AI,0.35,42.99754299754299
+2. ​Compliance and Safety Practices,2.08,Governance & Accountability*,x.AI,0.57,41.30434782608695
+2. ​Compliance and Safety Practices,2.09,Transparency & Communications*,x.AI,2.23,189.9488926746167
 3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,0.0
 3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,0.0
 3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,
@@ -92,6 +112,11 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Compliance and Safety Practices,2.02,Number of initiatives related to AI safety annually,OpenAI,9.0,250.0
 2. ​Compliance and Safety Practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,116.66666666666667
 2. ​Compliance and Safety Practices,2.04,Involved in military-related industries,OpenAI,1.0,125.0
+2. ​Compliance and Safety Practices,2.05,Risk Assessment*,OpenAI,2.1,125.44802867383513
+2. ​Compliance and Safety Practices,2.06,Current Safety Levels*,OpenAI,1.68,91.40369967355821
+2. ​Compliance and Safety Practices,2.07,Quality of Responsible Scaling Policy (RSP)*,OpenAI,0.9,110.56511056511056
+2. ​Compliance and Safety Practices,2.08,Governance & Accountability*,OpenAI,1.43,103.6231884057971
+2. ​Compliance and Safety Practices,2.09,Transparency & Communications*,OpenAI,0.88,74.95741056218058
 3. Commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,OpenAI,1.0,166.66666666666669
 3. Commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,OpenAI,1.0,166.66666666666669
 3. Commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,OpenAI,0.0,

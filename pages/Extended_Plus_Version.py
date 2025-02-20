@@ -27,13 +27,13 @@ def get_risk_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME1 = Path('data/risk_category_std.csv')
+    DATA_FILENAME1 = Path('data/risk_category_full.csv')
     risk_category_df = pd.read_csv(DATA_FILENAME1)
 
-    DATA_FILENAME2 = Path('data/riskindicators_table_std.csv')
+    DATA_FILENAME2 = Path('data/riskindicators_table_full.csv')
     risk_indicator_df = pd.read_csv(DATA_FILENAME2)
 
-    DATA_FILENAME3 = Path('data/risk_company_std.csv')
+    DATA_FILENAME3 = Path('data/risk_company_full.csv')
     risk_company_df = pd.read_csv(DATA_FILENAME3)
 
     return risk_category_df, risk_indicator_df, risk_company_df
