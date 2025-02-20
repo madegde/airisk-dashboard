@@ -88,7 +88,11 @@ fig.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 400]
-        )),
+        ),
+        angularaxis=dict(
+            rotation=90
+        )
+    ),
     showlegend=True,
     title="Risk Index based on Category"
 )
@@ -189,8 +193,10 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 500]
-            )),
+                range=[0, 500],
+        angularaxis=dict(
+            rotation=90
+        )),
         showlegend=True,
         title=f"Risk Index for {category}",
         annotations=[dict(

@@ -9,6 +9,7 @@ from plotly.subplots import make_subplots
 st.set_page_config(
     page_title='AI Risk dashboard',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
+    layout="wide",
 )
 
 # Sidebar controls
@@ -158,7 +159,7 @@ for category in rank_cat:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolargl(
             r=company_data['Rank'],
-            theta=company_data['Risk ID'],
+            theta=company_data['Risk Indicator'].astype(str),
             connectgaps=True,
             fill='toself',
             name=company
