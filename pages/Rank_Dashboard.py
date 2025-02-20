@@ -42,7 +42,7 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 ''
 ''
 
-rank_comp = category_df['Company'].unique()
+rank_comp = rank_cat_df['Company'].unique()
 
 if not len(rank_comp):
     st.warning("Select at least one company")
