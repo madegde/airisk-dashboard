@@ -3,17 +3,16 @@ import pandas as pd
 import math
 from pathlib import Path
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
     page_title='AI Risk dashboard',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
-    layout="wide",
 )
+
 # Sidebar controls
 with st.sidebar:
-    st.title("AI Risk Dashboard")
+    st.title("Rank Dashboard")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
@@ -27,13 +26,13 @@ def get_risk_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME1 = Path('data/risk_category.csv')
-    risk_category_df = pd.read_csv(DATA_FILENAME1)
+    DATA_FILENAME1 = Path('data/risk_category_rank.csv')
+    rank_cat_df = pd.read_csv(DATA_FILENAME1)
 
-    DATA_FILENAME2 = Path('data/riskindicators_table_std.csv')
-    risk_indicator_df = pd.read_csv(DATA_FILENAME2)
+    DATA_FILENAME2 = Path('data/riskindicators_table_rank.csv')
+    rank_df = pd.read_csv(DATA_FILENAME2)
 
-    return risk_category_df, risk_indicator_df
+    return rank_cat_df, rank_df
 
 category_df, indicator_df = get_risk_data()
 indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
@@ -51,14 +50,14 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 ''
 ''
 
-companies = category_df['Company'].unique()
+rank_comp = category_df['Company'].unique()
 
-if not len(companies):
+if not len(rank_comp):
     st.warning("Select at least one company")
 
 selected_companies = st.multiselect(
     'Which company would you like to view?',
-    companies,
+    rank_comp,
     ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
 
 ''
@@ -66,17 +65,17 @@ selected_companies = st.multiselect(
 ''
 
 # Create a list of unique risk categories
-categories = category_df['Risk Category'].unique()
+rank_cat = category_df['Risk Category'].unique()
 
-# Create a radar chart for the selected companies
+# Create a radar chart
 fig = go.Figure()
 
-# Add a trace for each selected company
-for company in selected_companies:
-    company_data = category_df[category_df['Company'] == company]
+# Add a trace for each company
+for company in rank_comp:
+    company_data = rank_cat_df[rank_cat_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
-        r=company_data['Standardized Value'],
-        theta=company_data['Risk Category'],
+        r=company_data['Rank'],
+        theta=categories,
         connectgaps=True,
         fill='toself',
         name=company
@@ -87,15 +86,18 @@ fig.update_layout(
     polar=dict(
         radialaxis=dict(
             visible=True,
-            range=[0, 400]
-        )),
+            range=[0, 5]
+        ),
+        angularaxis=dict(
+            rotation=90
+        )
+    ),
     showlegend=True,
-    title="Risk Index based on Category"
+    title="Risk Rank based on Category"
 )
 
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
-
 ''
 ''
 # Create a subplot with 1 row and multiple columns (one for each company)
@@ -108,7 +110,7 @@ fig = make_subplots(
 
 # Add a trace for each company in its respective subplot
 for i, company in enumerate(selected_companies):
-    company_data = category_df[category_df['Company'] == company]
+    company_data = rank_cat_df[rank_cat_df['Company'] == company]
     company_data = company_data.replace({
         'Risk Category': {
             '1. Competitive behavior/practice': 'Behaviour',
@@ -118,7 +120,7 @@ for i, company in enumerate(selected_companies):
         }
     })
     fig.add_trace(go.Scatterpolar(
-        r=company_data['Standardized Value'],
+        r=company_data['Rank'],
         theta=company_data['Risk Category'],
         connectgaps=True,
         fill='toself',
@@ -134,7 +136,7 @@ for j in range(1, len(selected_companies) + 1):
     fig.update_layout(**{f'polar{j}': dict(
         radialaxis=dict(
             visible=True,
-            range=[0, 400]
+            range=[0, 5]
         ),
         angularaxis=dict(
             rotation=90
@@ -149,20 +151,21 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig)
+
 ''
 ''
 # Create a radar chart for each category
 for category in categories:
-    category_data = indicator_df[indicator_df['Risk Category'] == category]
+    category_data = rank_df[rank_df['Risk Category'] == category]
     
     fig = go.Figure()
     
-    # Add a trace for each selected company
+    # Add a trace for each company
     for company in selected_companies:
         company_data = category_data[category_data['Company'] == company]
-        fig.add_trace(go.Scatterpolar(
-            r=company_data['Standardized Value'],
-            theta=company_data['Risk Indicator'].astype(str),  # Ensure Risk ID is treated as a string
+        fig.add_trace(go.Scatterpolargl(
+            r=company_data['Rank'],
+            theta=company_data['Risk ID'],
             connectgaps=True,
             fill='toself',
             name=company
@@ -189,10 +192,12 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 500]
-            )),
+                range=[0, 5]),
+        angularaxis=dict(
+            rotation=90
+        )),
         showlegend=True,
-        title=f"Risk Index for {category}",
+        title=f"Rank Chart for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
