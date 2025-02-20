@@ -18,14 +18,6 @@ with st.sidebar:
 
 @st.cache_data
 def get_risk_data():
-    """Grab risk data from CSV files.
-
-    This uses caching to avoid having to read the file every time. If we were
-    reading from an HTTP endpoint instead of a file, it's a good idea to set
-    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')
-    """
-
-    # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
     DATA_FILENAME1 = Path('data/risk_category_rank.csv')
     rank_cat_df = pd.read_csv(DATA_FILENAME1)
 
@@ -34,8 +26,8 @@ def get_risk_data():
 
     return rank_cat_df, rank_df
 
-category_df, indicator_df = get_risk_data()
-indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
+rank_cat_df, rank_df = get_risk_data()
+rank_df['Risk ID'] = rank_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
 
@@ -65,7 +57,7 @@ selected_companies = st.multiselect(
 ''
 
 # Create a list of unique risk categories
-rank_cat = category_df['Risk Category'].unique()
+rank_cat = rank_cat_df['Risk Category'].unique()
 
 # Create a radar chart
 fig = go.Figure()
@@ -155,7 +147,7 @@ st.plotly_chart(fig)
 ''
 ''
 # Create a radar chart for each category
-for category in categories:
+for category in rank_cat:
     category_data = rank_df[rank_df['Risk Category'] == category]
     
     fig = go.Figure()
