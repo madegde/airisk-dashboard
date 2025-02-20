@@ -7,7 +7,7 @@ from plotly.subplots import make_subplots
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='Extended AI Risk Dashboard',
+    page_title='Extended Plus AI Risk Dashboard',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
     layout="wide",
 )
@@ -45,7 +45,7 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_asia: Extended AI Risk Dashboard
+# :earth_asia: Extended Plus AI Risk Dashboard
 
 Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''

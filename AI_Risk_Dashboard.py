@@ -53,7 +53,7 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 
 ''
 ''
-
+# TABLE RISK INDEX
 col1, col2 = st.columns([3, 3], vertical_alignment='center')
 
 with col1:
@@ -105,6 +105,8 @@ with col2:
     st.plotly_chart(fig)
 ''
 ''
+# DROPDOWN MENU
+# Create a list of unique companies
 companies = category_df['Company'].unique()
 
 if not len(companies):
@@ -117,6 +119,7 @@ selected_companies = st.multiselect(
 
 ''
 ''
+# RISK INDEX BASED ON CATEGORY
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
 
@@ -154,6 +157,7 @@ st.plotly_chart(fig)
 
 ''
 ''
+# RISK CATEGORY FOR EACH COMPANY
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
@@ -198,8 +202,8 @@ for j in range(1, len(selected_companies) + 1):
     })
 
 fig.update_layout(
-    width=300*len(selected_companies),
-    height=300 + 250/len(selected_companies),
+    width=250*len(selected_companies),
+    height=250 + 300/len(selected_companies),
     showlegend=False,
     # title="Risk Index based on Category for Each Company"
 )
@@ -207,6 +211,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 ''
 ''
+# RISK INDICATOR CHART FOR EACH CATEGORY
 # Create a radar chart for each category
 for category in categories:
     category_data = indicator_df[indicator_df['Risk Category'] == category]
