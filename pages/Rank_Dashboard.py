@@ -67,7 +67,7 @@ for company in rank_comp:
     company_data = rank_cat_df[rank_cat_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Rank'],
-        theta=categories,
+        theta=rank_cat,
         connectgaps=True,
         fill='toself',
         name=company
