@@ -73,7 +73,7 @@ with col1:
 
     # Update the layout
     table.update_layout(
-        title='Risk Index by Company',
+        title=None,
         autosize=True,
         width=500
     )
@@ -97,7 +97,7 @@ with col2:
 
     # Update the layout to remove x-axis and show y-axis with company names
     fig.update_layout(
-        title='Risk by Company',
+        title=None,
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
         template='plotly_white'
