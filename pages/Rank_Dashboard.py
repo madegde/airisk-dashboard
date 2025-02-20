@@ -46,19 +46,6 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 # Add some spacing
 ''
 ''
-
-rank_comp = rank_cat_df['Company'].unique()
-
-if not len(rank_comp):
-    st.warning("Select at least one company")
-
-selected_companies = st.multiselect(
-    'Which company would you like to view?',
-    rank_comp,
-    ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
-
-''
-''
 # Create a horizontal bar chart
 fig = go.Figure(data=[
     go.Bar(
@@ -81,6 +68,19 @@ fig.update_layout(
 
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
+''
+''
+
+rank_comp = rank_cat_df['Company'].unique()
+
+if not len(rank_comp):
+    st.warning("Select at least one company")
+
+selected_companies = st.multiselect(
+    'Which company would you like to view?',
+    rank_comp,
+    ['Anthropic', 'Google DeepMind', 'Meta AI', 'OpenAI', 'x.AI'])
+
 ''
 ''
 # Create a list of unique risk categories

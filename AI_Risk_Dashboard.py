@@ -53,53 +53,58 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 
 ''
 ''
-# Create a horizontal bar chart
-fig = go.Figure(data=[
-    go.Bar(
-        name='Risk Index', 
-        x=risk_company_df['Standardized Value'], 
-        y=risk_company_df['Company'], 
-        orientation='h',
-        text=risk_company_df.index + 1,  # Add rank as text
-        textposition='auto'
+
+col1, col2 = st.columns([3, 3])
+
+with col1:
+    st.subheader("Table Risk Index")
+    # Sort the DataFrame by 'Standardized Value' in descending order
+    sorted_risk_company_df = risk_company_df.sort_values(by='Standardized Value', ascending=False)
+
+    # Create a table
+    table = go.Figure(data=[go.Table(
+        header=dict(values=['Company', 'Risk Index'],
+                    fill_color='paleturquoise',
+                    align='center'),
+        cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
+                fill_color='lavender',
+                align='center'))
+    ])
+
+    # Update the layout
+    table.update_layout(
+        title='Risk Index by Company',
+        autosize=True,
+        width=500
     )
-])
 
-# Update the layout to remove x-axis and show y-axis with company names
-fig.update_layout(
-    title='Risk by Company',
-    xaxis=dict(showgrid=False, zeroline=False, visible=False),
-    yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
-    template='plotly_white'
-)
-st.plotly_chart(fig)
+    # Show the table
+    st.plotly_chart(table)
+
+with col2:
+    st.subheader("Risk by Company")
+    # Create a horizontal bar chart
+    fig = go.Figure(data=[
+        go.Bar(
+            name='Risk Index', 
+            x=risk_company_df['Standardized Value'], 
+            y=risk_company_df['Company'], 
+            orientation='h',
+            text=risk_company_df.index + 1,  # Add rank as text
+            textposition='auto'
+        )
+    ])
+
+    # Update the layout to remove x-axis and show y-axis with company names
+    fig.update_layout(
+        title='Risk by Company',
+        xaxis=dict(showgrid=False, zeroline=False, visible=False),
+        yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
+        template='plotly_white'
+    )
+    st.plotly_chart(fig)
 ''
 ''
-# Sort the DataFrame by 'Standardized Value' in descending order
-sorted_risk_company_df = risk_company_df.sort_values(by='Standardized Value', ascending=False)
-
-# Create a table
-table = go.Figure(data=[go.Table(
-    header=dict(values=['Company', 'Risk Index'],
-                fill_color='paleturquoise',
-                align='center'),
-    cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
-               fill_color='lavender',
-               align='center'))
-])
-
-# Update the layout
-table.update_layout(
-    title='Risk Index by Company',
-    autosize=True,
-    width=500
-)
-
-# Show the table
-st.plotly_chart(table)
-''
-''
-
 companies = category_df['Company'].unique()
 
 if not len(companies):
