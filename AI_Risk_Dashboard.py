@@ -33,9 +33,12 @@ def get_risk_data():
     DATA_FILENAME2 = Path('data/riskindicators_table_std.csv')
     risk_indicator_df = pd.read_csv(DATA_FILENAME2)
 
-    return risk_category_df, risk_indicator_df
+    DATA_FILENAME3 = Path('data/risk_company_std.csv')
+    risk_company_df = pd.read_csv(DATA_FILENAME3)
 
-category_df, indicator_df = get_risk_data()
+    return risk_category_df, risk_indicator_df, risk_company_df
+
+category_df, indicator_df, risk_company_df = get_risk_data()
 indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
@@ -63,8 +66,28 @@ selected_companies = st.multiselect(
 
 ''
 ''
-''
+# Create a horizontal bar chart
+fig = go.Figure(data=[
+    go.Bar(
+        name='Standardized Value', 
+        x=risk_company_df['Standardized Value'], 
+        y=risk_company_df['Company'], 
+        orientation='h',
+        text=risk_company_df.index + 1,  # Add rank as text
+        textposition='auto'
+    )
+])
 
+# Update the layout to remove x-axis and show y-axis with company names
+fig.update_layout(
+    title='Risk by Company',
+    xaxis=dict(showgrid=False, zeroline=False, visible=False),
+    yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
+    template='plotly_white'
+)
+st.plotly_chart(fig)
+''
+''
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
 

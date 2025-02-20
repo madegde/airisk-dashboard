@@ -26,9 +26,12 @@ def get_risk_data():
     DATA_FILENAME2 = Path('data/riskindicators_table_rank.csv')
     rank_df = pd.read_csv(DATA_FILENAME2)
 
-    return rank_cat_df, rank_df
+    DATA_FILENAME3 = Path('data/risk_company_rank.csv')
+    rank_company_df = pd.read_csv(DATA_FILENAME3)
 
-rank_cat_df, rank_df = get_risk_data()
+    return rank_cat_df, rank_df, rank_company_df
+
+rank_cat_df, rank_df, rank_company_df = get_risk_data()
 rank_df['Risk ID'] = rank_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
@@ -56,8 +59,30 @@ selected_companies = st.multiselect(
 
 ''
 ''
-''
+# Create a horizontal bar chart
+fig = go.Figure(data=[
+    go.Bar(
+        name='Rank', 
+        x=rank_company_df['Rank'], 
+        y=rank_company_df['Company'], 
+        orientation='h',
+        text=rank_company_df.index + 1,  # Add rank as text
+        textposition='auto'
+    )
+])
 
+# Update the layout to remove x-axis and show y-axis with company names
+fig.update_layout(
+    title='Rank by Company',
+    xaxis=dict(showgrid=False, zeroline=False, visible=False),
+    yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=rank_company_df.index, ticktext=rank_company_df['Company']),
+    template='plotly_white'
+)
+
+# Display the radar chart in Streamlit
+st.plotly_chart(fig)
+''
+''
 # Create a list of unique risk categories
 rank_cat = rank_cat_df['Risk Category'].unique()
 
