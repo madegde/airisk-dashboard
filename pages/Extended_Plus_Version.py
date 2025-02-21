@@ -139,7 +139,7 @@ fig.update_layout(
     polar=dict(
         radialaxis=dict(
             visible=True,
-            range=[0, 400]
+            range=[0, 100]
         ),
         angularaxis=dict(
             rotation=90
@@ -190,7 +190,7 @@ for j in range(1, len(selected_companies) + 1):
     fig.update_layout(**{f'polar{j}': dict(
         radialaxis=dict(
             visible=True,
-            range=[0, 400]
+            range=[0, 100]
         ),
         angularaxis=dict(
             rotation=90
@@ -245,7 +245,7 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 500]),
+                range=[0, 100]),
         angularaxis=dict(
             rotation=90
         )),
