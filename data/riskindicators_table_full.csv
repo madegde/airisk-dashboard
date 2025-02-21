@@ -12,7 +12,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Google DeepMind,1.0,88.88888888888889
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,0.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Google DeepMind,1.0,100.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Google DeepMind,2.1,78.65168539325843
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Google DeepMind,2.1,21.348314606741567
 2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Google DeepMind,2.5,81.96721311475407
 2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Google DeepMind,0.8,34.0909090909091
 2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Google DeepMind,1.68,59.999999999999986
@@ -40,7 +40,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Anthropic,6.0,33.33333333333334
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,0.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Anthropic,1.0,100.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Anthropic,2.67,100.0
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Anthropic,2.67,0.0
 2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Anthropic,2.83,100.0
 2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Anthropic,1.67,100.00000000000003
 2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Anthropic,2.42,99.99999999999997
@@ -68,7 +68,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Meta AI,2.0,77.77777777777777
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,44.44444444444444
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Meta AI,1.0,100.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Meta AI,1.5,56.17977528089888
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Meta AI,1.5,43.82022471910112
 2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Meta AI,1.18,9.836065573770492
 2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Meta AI,0.35,0.0
 2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Meta AI,0.8,12.432432432432439
@@ -96,7 +96,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,100.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,100.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,x.AI,0.0,0.0
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,x.AI,0.0,100.0
 2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,x.AI,1.0,0.0
 2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,x.AI,0.35,0.0
 2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,x.AI,0.57,0.0
@@ -124,7 +124,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,OpenAI,9.0,0.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,22.22222222222223
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,OpenAI,1.0,100.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,OpenAI,2.1,78.65168539325843
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,OpenAI,2.1,21.348314606741567
 2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,OpenAI,1.68,37.158469945355186
 2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,OpenAI,0.9,41.66666666666667
 2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,OpenAI,1.43,46.486486486486484

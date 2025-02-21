@@ -12,7 +12,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Google DeepMind,1.0,88.88888888888889,4.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,0.0,1.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Google DeepMind,1.0,100.0,2.0
-2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Google DeepMind,1.55,60.810810810810814,4.0
+2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Google DeepMind,1.55,39.18918918918916,2.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Google DeepMind,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Google DeepMind,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Google DeepMind,0.0,,
@@ -33,7 +33,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Anthropic,6.0,33.33333333333334,2.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,0.0,1.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Anthropic,1.0,100.0,2.0
-2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Anthropic,2.13,99.99999999999997,5.0
+2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Anthropic,2.13,0.0,1.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Anthropic,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Anthropic,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Anthropic,0.0,,
@@ -54,7 +54,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Meta AI,2.0,77.77777777777777,3.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,44.44444444444444,4.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Meta AI,1.0,100.0,2.0
-2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Meta AI,0.65,0.0,1.0
+2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,Meta AI,0.65,99.99999999999997,5.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Meta AI,0.0,100.0,4.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Meta AI,0.0,100.0,4.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Meta AI,0.0,,
@@ -75,7 +75,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,100.0,5.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,100.0,5.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,x.AI,0.0,0.0,1.0
-2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,x.AI,0.75,6.75675675675676,2.0
+2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,x.AI,0.75,93.24324324324321,4.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,100.0,4.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,100.0,4.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,,
@@ -96,7 +96,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,OpenAI,9.0,0.0,1.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,22.22222222222223,3.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,OpenAI,1.0,100.0,2.0
-2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,OpenAI,1.32,45.27027027027027,3.0
+2. ​Lack of compliance and safety practices,2.05,FLI AI Safety Index Score,OpenAI,1.32,54.729729729729705,3.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,OpenAI,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,OpenAI,1.0,0.0,1.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,OpenAI,0.0,,
