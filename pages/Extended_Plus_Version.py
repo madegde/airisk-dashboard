@@ -167,10 +167,10 @@ for i, company in enumerate(selected_companies):
     company_data = category_df[category_df['Company'] == company]
     company_data = company_data.replace({
         'Risk Category': {
-            '1. Competitive behavior/practice': 'Behaviour',
-            '2. \u200bCompliance and Safety Practices': 'Safety',
-            '3. Commitment to emerging standards': 'Standards',
-            '4. Incidents': 'Incident'
+            "1. Hypercompetitive behavior": "Hypercompetitive",
+            "2. ​Lack of compliance and safety practices": "Unsafety",
+            "3. Lack of commitment to emerging standards": "Lack of Commitment",
+            "4. Incidents": "Incidents"
         }
     })
     fig.add_trace(go.Scatterpolar(
