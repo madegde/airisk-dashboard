@@ -1,7 +1,7 @@
 Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 1. Competitive behavior/practice,1.01,Valuation growth (%),Google DeepMind,0.356217063096425,7.333165550814175,1.0
 1. Competitive behavior/practice,1.02,Market share (revenue),Google DeepMind,0.07,72.91362859880839,4.0
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,-0.78,394.9367088607595,1.0
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,3.89218329,410.1493116875038,4.0
 1. Competitive behavior/practice,1.04,"Acquisitions - annual, count",Google DeepMind,0.0,0.0,1.0
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, cost",Google DeepMind,0.0,0.0,1.0
 1. Competitive behavior/practice,1.06,"Total investments made by the company, amount ($)",Google DeepMind,9500000.0,6.043256997455471,3.0
@@ -21,7 +21,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Google DeepMind,1.0,20.833333333333336,2.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),Anthropic,14.0,288.20718698589707,4.0
 1. Competitive behavior/practice,1.02,Market share (revenue),Anthropic,0.02,20.83246531394525,3.0
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Anthropic,-0.27,136.70886075949366,3.0
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Anthropic,-0.43915344,-46.27697816903158,1.0
 1. Competitive behavior/practice,1.04,"Acquisitions - annual, count",Anthropic,0.0,0.0,1.0
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, cost",Anthropic,0.0,0.0,1.0
 1. Competitive behavior/practice,1.06,"Total investments made by the company, amount ($)",Anthropic,10000000.0,6.361323155216285,4.0
@@ -41,7 +41,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Anthropic,0.0,0.0,1.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),Meta AI,0.660456014973626,13.596297871676018,2.0
 1. Competitive behavior/practice,1.02,Market share (revenue),Meta AI,1e-05,0.010416232656972627,1.0
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Meta AI,0.74,-374.6835443037975,4.0
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Meta AI,0.68092105,71.753892137755,3.0
 1. Competitive behavior/practice,1.04,"Acquisitions - annual, count",Meta AI,2.0,166.66666666666669,4.0
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, cost",Meta AI,16300000000.0,397.1009196662403,4.0
 1. Competitive behavior/practice,1.06,"Total investments made by the company, amount ($)",Meta AI,0.0,0.0,1.0
@@ -81,7 +81,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value,Rank
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),x.AI,4.0,83.33333333333334,4.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),OpenAI,4.41379310344827,90.86334959161275,3.0
 1. Competitive behavior/practice,1.02,Market share (revenue),OpenAI,0.39,406.2330736219324,5.0
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.48,243.03797468354426,2.0
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.33808127,-35.62622565622729,2.0
 1. Competitive behavior/practice,1.04,"Acquisitions - annual, count",OpenAI,3.0,250.0,5.0
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, cost",OpenAI,119000000.0,2.8990803337596684,3.0
 1. Competitive behavior/practice,1.06,"Total investments made by the company, amount ($)",OpenAI,766500000.0,487.59541984732823,5.0

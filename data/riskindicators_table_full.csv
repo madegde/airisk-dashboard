@@ -1,7 +1,7 @@
 Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 1. Competitive behavior/practice,1.01,Valuation growth (%),Google DeepMind,0.356217063096425,7.333165550814175
 1. Competitive behavior/practice,1.02,Market share (revenue),Google DeepMind,0.07,72.91362859880839
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,-0.78,394.9367088607595
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,3.89218329,410.1493116875038
 1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency)*,Google DeepMind,,
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Google DeepMind,0.0,0.0
 1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Google DeepMind,0.0,0.0
@@ -30,7 +30,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 4. Incidents,4.05,Outsourcing incidents*,Google DeepMind,0.0,0.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),Anthropic,14.0,288.20718698589707
 1. Competitive behavior/practice,1.02,Market share (revenue),Anthropic,0.02,20.83246531394525
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Anthropic,-0.27,136.70886075949366
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Anthropic,-0.43915344,-46.27697816903158
 1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency)*,Anthropic,,
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Anthropic,0.0,0.0
 1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Anthropic,0.0,0.0
@@ -59,7 +59,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 4. Incidents,4.05,Outsourcing incidents*,Anthropic,0.0,0.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),Meta AI,0.660456014973626,13.596297871676018
 1. Competitive behavior/practice,1.02,Market share (revenue),Meta AI,1e-05,0.010416232656972627
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Meta AI,0.74,-374.6835443037975
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),Meta AI,0.68092105,71.753892137755
 1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency)*,Meta AI,,
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",Meta AI,2.0,166.66666666666669
 1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",Meta AI,16300000000.0,397.1009196662403
@@ -117,7 +117,7 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 4. Incidents,4.05,Outsourcing incidents*,x.AI,0.0,0.0
 1. Competitive behavior/practice,1.01,Valuation growth (%),OpenAI,4.41379310344827,90.86334959161275
 1. Competitive behavior/practice,1.02,Market share (revenue),OpenAI,0.39,406.2330736219324
-1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.48,243.03797468354426
+1. Competitive behavior/practice,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.33808127,-35.62622565622729
 1. Competitive behavior/practice,1.04,Acceleration (yoy change in new model frequency)*,OpenAI,,
 1. Competitive behavior/practice,1.05,"Acquisitions - annual, count",OpenAI,3.0,250.0
 1. Competitive behavior/practice,1.06,"Acquisitions - annual, cost",OpenAI,119000000.0,2.8990803337596684
