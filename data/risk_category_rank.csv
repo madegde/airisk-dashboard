@@ -1,19 +1,19 @@
 Risk Category,Company,Rank
-1. Hypercompetitive behavior,Anthropic,4.0
-1. Hypercompetitive behavior,Google DeepMind,2.0
-1. Hypercompetitive behavior,Meta AI,3.0
+1. Hypercompetitive behavior,Anthropic,3.0
+1. Hypercompetitive behavior,Google DeepMind,4.0
+1. Hypercompetitive behavior,Meta AI,2.0
 1. Hypercompetitive behavior,OpenAI,5.0
 1. Hypercompetitive behavior,x.AI,1.0
-2. ​Lack of compliance and safety practices,Anthropic,1.0
+2. ​Lack of compliance and safety practices,Anthropic,5.0
 2. ​Lack of compliance and safety practices,Google DeepMind,3.0
-2. ​Lack of compliance and safety practices,Meta AI,4.0
-2. ​Lack of compliance and safety practices,OpenAI,2.0
-2. ​Lack of compliance and safety practices,x.AI,5.0
-3. Lack of commitment to emerging standards,Anthropic,1.0
-3. Lack of commitment to emerging standards,Google DeepMind,1.0
-3. Lack of commitment to emerging standards,Meta AI,4.0
-3. Lack of commitment to emerging standards,OpenAI,1.0
-3. Lack of commitment to emerging standards,x.AI,4.0
+2. ​Lack of compliance and safety practices,Meta AI,2.0
+2. ​Lack of compliance and safety practices,OpenAI,4.0
+2. ​Lack of compliance and safety practices,x.AI,1.0
+3. Lack of commitment to emerging standards,Anthropic,3.0
+3. Lack of commitment to emerging standards,Google DeepMind,3.0
+3. Lack of commitment to emerging standards,Meta AI,1.0
+3. Lack of commitment to emerging standards,OpenAI,3.0
+3. Lack of commitment to emerging standards,x.AI,1.0
 4. Incidents,Anthropic,1.0
 4. Incidents,Google DeepMind,4.0
 4. Incidents,Meta AI,3.0
