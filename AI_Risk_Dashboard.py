@@ -50,7 +50,49 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''
 
+''
+''
+# GAUGE CHART
+# Create gauge charts for each company horizontally
+fig = make_subplots(
+    rows=1, cols=len(risk_company_df),
+    horizontal_spacing=0.05,
+    subplot_titles=risk_company_df['Company'].tolist(),
+    specs=[[{'type': 'domain'} for _ in range(len(risk_company_df))]]
+)
 
+for i, row in risk_company_df.iterrows():
+    fig.add_trace(
+        go.Indicator(
+            mode="gauge+number",
+            value=row['Standardized Value'],
+            # title={'text': f"{row['Company']} Risk Score"},
+            gauge={
+                'axis': {'range': [0, 100]},
+                'bar': {'color': "whitesmoke"},
+                'steps': [
+                    {'range': [0, 33], 'color': "#008450"},
+                    {'range': [33, 66], 'color': "#EFB700"},
+                    {'range': [66, 100], 'color': "#B81D13"}
+                ],
+                'threshold': {
+                    'line': {'color': "whitesmoke", 'width': 5},
+                    'thickness': 0.69,
+                    'value': row['Standardized Value']
+                }
+            }
+        ),
+        row=1, col=i+1
+    )
+
+fig.update_layout(
+    width=300 * len(risk_company_df),
+    height=400,
+    showlegend=False,
+    title="Company Risk Scores"
+)
+
+st.plotly_chart(fig)
 ''
 ''
 # TABLE RISK INDEX
