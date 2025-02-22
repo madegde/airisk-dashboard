@@ -57,7 +57,7 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 fig = make_subplots(
     rows=1, cols=len(risk_company_df),
     horizontal_spacing=0.05,
-    subplot_titles=risk_company_df['Company'].tolist(),
+    # subplot_titles=risk_company_df['Company'].tolist(),
     specs=[[{'type': 'domain'} for _ in range(len(risk_company_df))]]
 )
 
@@ -66,7 +66,7 @@ for i, row in risk_company_df.iterrows():
         go.Indicator(
             mode="gauge+number",
             value=row['Standardized Value'],
-            # title={'text': f"{row['Company']} Risk Score"},
+            title={'text': f"{row['Company']}"},
             gauge={
                 'axis': {'range': [0, 100]},
                 'bar': {'color': "whitesmoke"},
@@ -79,7 +79,10 @@ for i, row in risk_company_df.iterrows():
                     'line': {'color': "whitesmoke", 'width': 5},
                     'thickness': 0.69,
                     'value': row['Standardized Value']
-                }
+                },
+                'bordercolor':'white',
+
+
             }
         ),
         row=1, col=i+1
@@ -89,7 +92,7 @@ fig.update_layout(
     width=300 * len(risk_company_df),
     height=400,
     showlegend=False,
-    title="Company Risk Scores"
+    title="Competitive Dynamic Risk Scores"
 )
 
 st.plotly_chart(fig)
