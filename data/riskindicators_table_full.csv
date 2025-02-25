@@ -13,15 +13,15 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,0.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Google DeepMind,1.0,100.0
 2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Google DeepMind,2.1,21.348314606741567
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Google DeepMind,2.5,81.96721311475407
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Google DeepMind,0.8,34.0909090909091
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Google DeepMind,1.68,59.999999999999986
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Google DeepMind,1.13,50.672645739910315
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Google DeepMind,2.5,18.032786885245926
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Google DeepMind,0.8,65.9090909090909
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Google DeepMind,1.68,40.000000000000014
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Google DeepMind,1.13,49.327354260089685
 2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,Google DeepMind,1.1,66.42857142857143
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Google DeepMind,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Google DeepMind,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Google DeepMind,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Google DeepMind,80.29222837209302,88.77798219652388
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Google DeepMind,80.29222837209302,11.22201780347612
 4. Incidents,4.01,AI-related incidents,Google DeepMind,15.0,46.42857142857143
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Google DeepMind,0.0,0.0
 4. Incidents,4.03,Litigation Frequency where company is defendant,Google DeepMind,6.0,33.33333333333333
@@ -41,15 +41,15 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,0.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Anthropic,1.0,100.0
 2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Anthropic,2.67,0.0
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Anthropic,2.83,100.0
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Anthropic,1.67,100.00000000000003
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Anthropic,2.42,99.99999999999997
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Anthropic,1.63,73.09417040358744
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Anthropic,2.83,0.0
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Anthropic,1.67,-2.842170943040401e-14
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Anthropic,2.42,2.842170943040401e-14
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Anthropic,1.63,26.90582959641256
 2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,Anthropic,1.57,99.99999999999997
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Anthropic,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Anthropic,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Anthropic,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Anthropic,90.44160093023255,100.0
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Anthropic,90.44160093023255,0.0
 4. Incidents,4.01,AI-related incidents,Anthropic,2.0,0.0
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Anthropic,0.0,0.0
 4. Incidents,4.03,Litigation Frequency where company is defendant,Anthropic,1.0,5.555555555555555
@@ -69,15 +69,15 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,44.44444444444444
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,Meta AI,1.0,100.0
 2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,Meta AI,1.5,43.82022471910112
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Meta AI,1.18,9.836065573770492
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Meta AI,0.35,0.0
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Meta AI,0.8,12.432432432432439
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Meta AI,0.0,0.0
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,Meta AI,1.18,90.1639344262295
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,Meta AI,0.35,100.0
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,Meta AI,0.8,87.56756756756756
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,Meta AI,0.0,100.0
 2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,Meta AI,0.17,0.0
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Meta AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Meta AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Meta AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Meta AI,47.1430888372093,52.12544708665197
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Meta AI,47.1430888372093,47.87455291334803
 4. Incidents,4.01,AI-related incidents,Meta AI,22.0,71.42857142857143
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Meta AI,0.0,0.0
 4. Incidents,4.03,Litigation Frequency where company is defendant,Meta AI,1.0,5.555555555555555
@@ -97,15 +97,15 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,100.0
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
 2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,x.AI,1.0,0.0
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,x.AI,0.35,0.0
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,x.AI,0.57,0.0
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,x.AI,2.23,100.0
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,x.AI,1.0,100.0
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,x.AI,0.35,100.0
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,x.AI,0.57,100.0
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,x.AI,2.23,0.0
 2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,x.AI,0.35,12.85714285714285
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,x.AI,0.0,0.0
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,x.AI,0.0,100.0
 4. Incidents,4.01,AI-related incidents,x.AI,14.0,42.85714285714286
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),x.AI,0.0,0.0
 4. Incidents,4.03,Litigation Frequency where company is defendant,x.AI,0.0,0.0
@@ -125,15 +125,15 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,22.22222222222223
 2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,OpenAI,1.0,100.0
 2. ​Lack of compliance and safety practices,2.05,Risk Assessment*,OpenAI,2.1,21.348314606741567
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,OpenAI,1.68,37.158469945355186
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,OpenAI,0.9,41.66666666666667
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,OpenAI,1.43,46.486486486486484
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,OpenAI,0.88,39.46188340807175
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels*,OpenAI,1.68,62.841530054644814
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP)*,OpenAI,0.9,58.33333333333333
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability*,OpenAI,1.43,53.513513513513516
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications*,OpenAI,0.88,60.53811659192825
 2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,OpenAI,0.93,54.285714285714285
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,OpenAI,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,OpenAI,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,OpenAI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,OpenAI,74.00396837209303,81.82514198215083
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,OpenAI,74.00396837209303,18.174858017849175
 4. Incidents,4.01,AI-related incidents,OpenAI,30.0,100.0
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),OpenAI,2.0,100.0
 4. Incidents,4.03,Litigation Frequency where company is defendant,OpenAI,18.0,100.0
