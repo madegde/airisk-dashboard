@@ -13,7 +13,7 @@ st.set_page_config(
 )
 # Sidebar controls
 with st.sidebar:
-    st.title("AI Risk Dashboard Extended Version")
+    st.title("AI Risk Dashboard Extended")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
