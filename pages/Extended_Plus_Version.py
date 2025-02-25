@@ -7,13 +7,13 @@ from plotly.subplots import make_subplots
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='Full Version AI Risk Dashboard',
+    page_title='AI Risk Dashboard Extended Version',
     page_icon=':earth_asia:', # This is an emoji shortcode. Could be a URL too.
     layout="wide",
 )
 # Sidebar controls
 with st.sidebar:
-    st.title("Full Version")
+    st.title("AI Risk Dashboard Extended Version")
 # ----------------------------------------------------------------------------- 
 # Declare some useful functions.
 
@@ -45,7 +45,7 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_asia: Full Version AI Risk Dashboard
+# :earth_asia: AI Risk Dashboard Extended Version
 
 Capstone Project - LSE MPA in Data Science for Public Policy & United Nations University Centre for Policy Research (UNU-CPR)
 '''
@@ -53,7 +53,52 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 
 ''
 ''
+# GAUGE CHART
+# Create gauge charts for each company horizontally
+fig = make_subplots(
+    rows=1, cols=len(risk_company_df),
+    horizontal_spacing=0.05,
+    # subplot_titles=risk_company_df['Company'].tolist(),
+    specs=[[{'type': 'domain'} for _ in range(len(risk_company_df))]]
+)
 
+for i, row in risk_company_df.iterrows():
+    fig.add_trace(
+        go.Indicator(
+            mode="gauge+number",
+            value=row['Standardized Value'],
+            title={'text': f"{row['Company']}"},
+            gauge={
+                'axis': {'range': [0, 100]},
+                'bar': {'color': "whitesmoke"},
+                'steps': [
+                    {'range': [0, 33], 'color': "#008450"},
+                    {'range': [33, 66], 'color': "#EFB700"},
+                    {'range': [66, 100], 'color': "#B81D13"}
+                ],
+                'threshold': {
+                    'line': {'color': "whitesmoke", 'width': 5},
+                    'thickness': 0.69,
+                    'value': row['Standardized Value']
+                },
+                'bordercolor':'white',
+
+
+            }
+        ),
+        row=1, col=i+1
+    )
+
+fig.update_layout(
+    width=300 * len(risk_company_df),
+    height=400,
+    showlegend=False,
+    title="Competitive Dynamic Risk Scores"
+)
+
+st.plotly_chart(fig)
+''
+''
 col1, col2 = st.columns([3, 3], vertical_alignment='center')
 
 with col1:
