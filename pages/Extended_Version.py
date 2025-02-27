@@ -38,7 +38,7 @@ def get_risk_data():
 
     return risk_category_df, risk_indicator_df, risk_company_df
 
-category_df, indicator_df, risk_company_df = get_risk_data()
+risk_category_df, risk_indicator_df, risk_company_df = get_risk_data()
 indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 # ----------------------------------------------------------------------------- 
 # Draw the actual page
