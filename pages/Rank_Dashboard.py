@@ -54,8 +54,7 @@ fig = go.Figure(data=[
         y=rank_company_df['Company'], 
         orientation='h',
         text=rank_company_df.index + 1,  # Add rank as text
-        textposition='auto',
-        marker=dict(color='#009edb')
+        textposition='auto'
     )
 ])
 
@@ -64,9 +63,7 @@ fig.update_layout(
     title='Rank by Company',
     xaxis=dict(showgrid=False, zeroline=False, visible=False),
     yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=rank_company_df.index, ticktext=rank_company_df['Company']),
-    template='plotly_white',
-    # plot_bgcolor='#e4effb',
-    font=dict(color='#454545')
+    template='plotly_white'
 )
 
 # Display the radar chart in Streamlit
@@ -97,7 +94,7 @@ for company in rank_comp:
     company_data = rank_cat_df[rank_cat_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Rank'],
-        theta=categories,
+        theta=rank_cat,
         connectgaps=True,
         fill='toself',
         name=company
@@ -115,11 +112,8 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Rank based on Category",
-    plot_bgcolor='#e4effb',
-    font=dict(color='#454545')
+    title="Risk Rank based on Category"
 )
-
 
 # Display the radar chart in Streamlit
 st.plotly_chart(fig)
@@ -128,13 +122,13 @@ st.plotly_chart(fig)
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
-    cols=len(rank_comp), 
-    subplot_titles=[f"{company}" for company in rank_comp], 
-    specs=[[{'type': 'polar'}] * len(rank_comp)]
+    cols=len(selected_companies), 
+    subplot_titles=[f"{company}" for company in selected_companies], 
+    specs=[[{'type': 'polar'}] * len(selected_companies)]
 )
 
 # Add a trace for each company in its respective subplot
-for i, company in enumerate(rank_comp):
+for i, company in enumerate(selected_companies):
     company_data = rank_cat_df[rank_cat_df['Company'] == company]
     company_data = company_data.replace({
         'Risk Category': {
@@ -157,7 +151,7 @@ for annotation in fig['layout']['annotations']:
     annotation['y'] += 0.1  
 
 # Update the layout
-for j in range(1, len(companies) + 1):
+for j in range(1, len(selected_companies) + 1):
     fig.update_layout(**{f'polar{j}': dict(
         radialaxis=dict(
             visible=True,
@@ -169,11 +163,10 @@ for j in range(1, len(companies) + 1):
     })
 
 fig.update_layout(
-    width=2000,  # Adjust width as needed
+    width=300*len(selected_companies),
+    height=300 + 250/len(selected_companies),
     showlegend=False,
-    # title="Risk Index based on Category for Each Company",
-    plot_bgcolor='#e4effb',
-    font=dict(color='#454545')
+    # title="Risk Index based on Category for Each Company"
 )
 
 st.plotly_chart(fig)
@@ -181,17 +174,17 @@ st.plotly_chart(fig)
 ''
 ''
 # Create a radar chart for each category
-for category in categories:
+for category in rank_cat:
     category_data = rank_df[rank_df['Risk Category'] == category]
     
     fig = go.Figure()
     
     # Add a trace for each company
-    for company in companies:
+    for company in selected_companies:
         company_data = category_data[category_data['Company'] == company]
         fig.add_trace(go.Scatterpolargl(
             r=company_data['Rank'],
-            theta=company_data['Risk ID'],
+            theta=company_data['Risk Indicator'].astype(str),
             connectgaps=True,
             fill='toself',
             name=company
@@ -232,11 +225,8 @@ for category in categories:
             showarrow=False,
             text="<br>".join(annotations),
             align="left"
-        )],
-        plot_bgcolor='#e4effb',
-        font=dict(color='#454545')
+        )]
     )
-    
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
