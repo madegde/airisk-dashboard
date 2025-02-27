@@ -54,6 +54,7 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 ''
 ''
 # GAUGE CHART
+st.subheader("Competitive Dynamic Risk Scores")
 # Create gauge charts for each company horizontally
 fig = make_subplots(
     rows=1, cols=len(risk_company_df),
@@ -93,7 +94,7 @@ fig.update_layout(
     width=300 * len(risk_company_df),
     height=300,
     showlegend=False,
-    title="Competitive Dynamic Risk Scores",
+    # title="Competitive Dynamic Risk Scores",
     font=dict(color='#454545'),
 )
 
@@ -172,6 +173,7 @@ selected_companies = st.multiselect(
 ''
 ''
 # RISK INDEX BASED ON CATEGORY
+st.subheader("Risk Index based on Category")
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
 
@@ -201,7 +203,7 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Index based on Category",
+    # title="Risk Index based on Category",
     font=dict(color='#454545'),
     plot_bgcolor='#e4effb'
 )
@@ -268,6 +270,7 @@ st.plotly_chart(fig)
 ''
 ''
 # RISK INDICATOR CHART FOR EACH CATEGORY
+st.subheader("Risk Indicator for each Category")
 # Create a radar chart for each category
 for category in categories:
     category_data = indicator_df[indicator_df['Risk Category'] == category]
@@ -311,7 +314,7 @@ for category in categories:
             rotation=90
         )),
         showlegend=True,
-        title=f"Risk Chart for {category}",
+        title=f"{category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
@@ -327,4 +330,3 @@ for category in categories:
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
-    
