@@ -91,7 +91,7 @@ for i, row in risk_company_df.iterrows():
 
 fig.update_layout(
     width=300 * len(risk_company_df),
-    height=400,
+    height=300,
     showlegend=False,
     title="Competitive Dynamic Risk Scores",
     font=dict(color='#454545'),
@@ -124,7 +124,8 @@ with col1:
     table.update_layout(
         # title=None,
         autosize=True,
-        width=500
+        width=500,
+        height=200,
     )
 
     # Show the table
