@@ -125,7 +125,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 ''
 ''
-st.subheader("Risk Rank for each Category")
+
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
@@ -182,6 +182,7 @@ st.plotly_chart(fig)
 
 ''
 ''
+st.subheader("Risk Rank for each Category")
 # Create a radar chart for each category
 for category in rank_cat:
     category_data = rank_df[rank_df['Risk Category'] == category]
