@@ -124,7 +124,7 @@ with col1:
         # title=None,
         autosize=True,
         width=500,
-        height=200,
+        # height=200,
     )
 
     # Show the table
