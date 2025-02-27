@@ -93,12 +93,14 @@ fig.update_layout(
     width=300 * len(risk_company_df),
     height=400,
     showlegend=False,
-    title="Competitive Dynamic Risk Scores"
+    title="Competitive Dynamic Risk Scores",
+    font=dict(color='#454545'),
 )
 
 st.plotly_chart(fig)
 ''
 ''
+# TABLE RISK INDEX
 col1, col2 = st.columns([3, 3], vertical_alignment='center')
 
 with col1:
@@ -109,10 +111,12 @@ with col1:
     # Create a table
     table = go.Figure(data=[go.Table(
         header=dict(values=['Company', 'Risk Index'],
-                    fill_color='paleturquoise',
+                    fill_color='#009edb',
+                    font=dict(color='#ffffff'),
                     align='center'),
         cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
-                fill_color='lavender',
+                fill_color='#e4effb',
+                font=dict(color='#454545'),
                 align='center'))
     ])
 
@@ -136,7 +140,8 @@ with col2:
             y=risk_company_df['Company'], 
             orientation='h',
             text=risk_company_df.index + 1,  # Add rank as text
-            textposition='auto'
+            textposition='auto',
+            marker=dict(color='#009edb')
         )
     ])
 
@@ -145,11 +150,14 @@ with col2:
         # title=None,
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
-        template='plotly_white'
+        template='plotly_white',
+        font=dict(color='#454545')
     )
     st.plotly_chart(fig)
 ''
 ''
+# DROPDOWN MENU
+# Create a list of unique companies
 companies = category_df['Company'].unique()
 
 if not len(companies):
@@ -162,6 +170,7 @@ selected_companies = st.multiselect(
 
 ''
 ''
+# RISK INDEX BASED ON CATEGORY
 # Create a list of unique risk categories
 categories = category_df['Risk Category'].unique()
 
@@ -191,7 +200,9 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Index based on Category"
+    title="Risk Index based on Category",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 # Display the radar chart in Streamlit
@@ -199,6 +210,7 @@ st.plotly_chart(fig)
 
 ''
 ''
+# RISK CATEGORY FOR EACH COMPANY
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
@@ -243,15 +255,18 @@ for j in range(1, len(selected_companies) + 1):
     })
 
 fig.update_layout(
-    width=300*len(selected_companies),
-    height=300 + 250/len(selected_companies),
+    width=250*len(selected_companies),
+    height=250 + 300/len(selected_companies),
     showlegend=False,
-    # title="Risk Index based on Category for Each Company"
+    # title="Risk Index based on Category for Each Company",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 st.plotly_chart(fig)
 ''
 ''
+# RISK INDICATOR CHART FOR EACH CATEGORY
 # Create a radar chart for each category
 for category in categories:
     category_data = indicator_df[indicator_df['Risk Category'] == category]
@@ -304,8 +319,11 @@ for category in categories:
             showarrow=False,
             text="<br>".join(annotations),
             align="left"
-        )]
+        )],
+        font=dict(color='#454545'),
+        plot_bgcolor='#e4effb'
     )
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
+    

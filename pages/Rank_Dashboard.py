@@ -54,7 +54,8 @@ fig = go.Figure(data=[
         y=rank_company_df['Company'], 
         orientation='h',
         text=rank_company_df.index + 1,  # Add rank as text
-        textposition='auto'
+        textposition='auto',
+        marker=dict(color='#009edb')
     )
 ])
 
@@ -63,7 +64,8 @@ fig.update_layout(
     title='Rank by Company',
     xaxis=dict(showgrid=False, zeroline=False, visible=False),
     yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=rank_company_df.index, ticktext=rank_company_df['Company']),
-    template='plotly_white'
+    template='plotly_white',
+    font=dict(color='#454545'),
 )
 
 # Display the radar chart in Streamlit
@@ -112,7 +114,9 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Rank based on Category"
+    title="Risk Rank based on Category",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 # Display the radar chart in Streamlit
@@ -166,7 +170,9 @@ fig.update_layout(
     width=300*len(selected_companies),
     height=300 + 250/len(selected_companies),
     showlegend=False,
-    # title="Risk Index based on Category for Each Company"
+    # title="Risk Index based on Category for Each Company",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 st.plotly_chart(fig)
@@ -225,7 +231,9 @@ for category in rank_cat:
             showarrow=False,
             text="<br>".join(annotations),
             align="left"
-        )]
+        )],
+        font=dict(color='#454545'),
+        plot_bgcolor='#e4effb'
     )
     
     # Display the radar chart in Streamlit

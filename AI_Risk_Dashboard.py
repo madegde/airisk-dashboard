@@ -92,7 +92,8 @@ fig.update_layout(
     width=300 * len(risk_company_df),
     height=400,
     showlegend=False,
-    title="Competitive Dynamic Risk Scores"
+    title="Competitive Dynamic Risk Scores",
+    font=dict(color='#454545'),
 )
 
 st.plotly_chart(fig)
@@ -109,10 +110,12 @@ with col1:
     # Create a table
     table = go.Figure(data=[go.Table(
         header=dict(values=['Company', 'Risk Index'],
-                    fill_color='paleturquoise',
+                    fill_color='#009edb',
+                    font=dict(color='#ffffff'),
                     align='center'),
         cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
-                fill_color='lavender',
+                fill_color='#e4effb',
+                font=dict(color='#454545'),
                 align='center'))
     ])
 
@@ -136,7 +139,8 @@ with col2:
             y=risk_company_df['Company'], 
             orientation='h',
             text=risk_company_df.index + 1,  # Add rank as text
-            textposition='auto'
+            textposition='auto',
+            marker=dict(color='#009edb')
         )
     ])
 
@@ -145,7 +149,8 @@ with col2:
         # title=None,
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
-        template='plotly_white'
+        template='plotly_white',
+        font=dict(color='#454545')
     )
     st.plotly_chart(fig)
 ''
@@ -194,7 +199,9 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Index based on Category"
+    title="Risk Index based on Category",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 # Display the radar chart in Streamlit
@@ -250,7 +257,9 @@ fig.update_layout(
     width=250*len(selected_companies),
     height=250 + 300/len(selected_companies),
     showlegend=False,
-    # title="Risk Index based on Category for Each Company"
+    # title="Risk Index based on Category for Each Company",
+    font=dict(color='#454545'),
+    plot_bgcolor='#e4effb'
 )
 
 st.plotly_chart(fig)
@@ -309,7 +318,9 @@ for category in categories:
             showarrow=False,
             text="<br>".join(annotations),
             align="left"
-        )]
+        )],
+        font=dict(color='#454545'),
+        plot_bgcolor='#e4effb'
     )
     
     # Display the radar chart in Streamlit
