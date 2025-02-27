@@ -109,18 +109,22 @@ with col1:
     # Create a table
     table = go.Figure(data=[go.Table(
         header=dict(values=['Company', 'Risk Index'],
-                    fill_color='paleturquoise',
+                    fill_color='#009edb',
+                    font=dict(color='#ffffff'),
                     align='center'),
         cells=dict(values=[sorted_risk_company_df['Company'], sorted_risk_company_df['Standardized Value'].map('{:.2f}'.format)],
-                fill_color='lavender',
+                fill_color='#e4effb',
+                font=dict(color='#454545'),
                 align='center'))
     ])
 
     # Update the layout
     table.update_layout(
-        # title=None,
-        autosize=True,
-        width=500
+        autosize=False,
+        width=500,
+        height=200,
+        margin=dict(l=10, r=10, t=40, b=0),
+        # paper_bgcolor='#ffffff'
     )
 
     # Show the table
@@ -131,21 +135,24 @@ with col2:
     # Create a horizontal bar chart
     fig = go.Figure(data=[
         go.Bar(
-            name='Risk Index', 
+            name='Standardized Value', 
             x=risk_company_df['Standardized Value'], 
             y=risk_company_df['Company'], 
             orientation='h',
             text=risk_company_df.index + 1,  # Add rank as text
-            textposition='auto'
+            textposition='auto',
+            marker=dict(color='#009edb')  # Set the bar color
         )
     ])
 
     # Update the layout to remove x-axis and show y-axis with company names
     fig.update_layout(
-        # title=None,
         xaxis=dict(showgrid=False, zeroline=False, visible=False),
         yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=risk_company_df.index, ticktext=risk_company_df['Company']),
-        template='plotly_white'
+        template='plotly_white',
+        # plot_bgcolor='#e4effb',  # Set the background color
+        # paper_bgcolor='#ffffff',  # Set the secondary background color
+        font=dict(color='#454545')  # Set the text color and font
     )
     st.plotly_chart(fig)
 ''
@@ -169,14 +176,15 @@ selected_companies = st.multiselect(
 categories = category_df['Risk Category'].unique()
 
 # Create a radar chart for the selected companies
+# Create a radar chart
 fig = go.Figure()
 
-# Add a trace for each selected company
-for company in selected_companies:
-    company_data = category_df[category_df['Company'] == company]
+# Add a trace for each company
+for company in companies:
+    company_data = risk_category_df[risk_category_df['Company'] == company]
     fig.add_trace(go.Scatterpolar(
         r=company_data['Standardized Value'],
-        theta=company_data['Risk Category'],
+        theta=categories,
         connectgaps=True,
         fill='toself',
         name=company
@@ -188,13 +196,11 @@ fig.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 100]
-        ),
-        angularaxis=dict(
-            rotation=90
-        )
-    ),
+        )),
     showlegend=True,
-    title="Risk Index based on Category"
+    title="Risk Index based on Category",
+    plot_bgcolor='#e4effb',  # Set the background color
+    font=dict(color='#454545')  # Set the text color
 )
 
 # Display the radar chart in Streamlit
@@ -206,14 +212,14 @@ st.plotly_chart(fig)
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
-    cols=len(selected_companies), 
-    subplot_titles=[f"{company}" for company in selected_companies], 
-    specs=[[{'type': 'polar'}] * len(selected_companies)]
+    cols=len(companies), 
+    subplot_titles=[f"{company}" for company in companies], 
+    specs=[[{'type': 'polar'}] * len(companies)]
 )
 
 # Add a trace for each company in its respective subplot
-for i, company in enumerate(selected_companies):
-    company_data = category_df[category_df['Company'] == company]
+for i, company in enumerate(companies):
+    company_data = risk_category_df[risk_category_df['Company'] == company]
     company_data = company_data.replace({
         'Risk Category': {
             "1. Hypercompetitive behavior": "Hypercompetitive",
@@ -235,7 +241,7 @@ for annotation in fig['layout']['annotations']:
     annotation['y'] += 0.1  
 
 # Update the layout
-for j in range(1, len(selected_companies) + 1):
+for j in range(1, len(companies) + 1):
     fig.update_layout(**{f'polar{j}': dict(
         radialaxis=dict(
             visible=True,
@@ -247,10 +253,11 @@ for j in range(1, len(selected_companies) + 1):
     })
 
 fig.update_layout(
-    width=250*len(selected_companies),
-    height=250 + 300/len(selected_companies),
+    width=3500,  # Adjust width as needed
     showlegend=False,
     # title="Risk Index based on Category for Each Company"
+    plot_bgcolor='#e4effb',  # Set the background color
+    font=dict(color='#454545')  # Set the text color
 )
 
 st.plotly_chart(fig)
@@ -259,16 +266,16 @@ st.plotly_chart(fig)
 # RISK INDICATOR CHART FOR EACH CATEGORY
 # Create a radar chart for each category
 for category in categories:
-    category_data = indicator_df[indicator_df['Risk Category'] == category]
+    category_data = df[df['Risk Category'] == category]
     
     fig = go.Figure()
     
-    # Add a trace for each selected company
-    for company in selected_companies:
+    # Add a trace for each company
+    for company in companies:
         company_data = category_data[category_data['Company'] == company]
-        fig.add_trace(go.Scatterpolar(
+        fig.add_trace(go.Scatterpolargl(
             r=company_data['Standardized Value'],
-            theta=company_data['Risk Indicator'].astype(str),  # Ensure Risk ID is treated as a string
+            theta=company_data['Risk ID'],
             connectgaps=True,
             fill='toself',
             name=company
@@ -295,12 +302,10 @@ for category in categories:
         polar=dict(
             radialaxis=dict(
                 visible=True,
-                range=[0, 100]),
-        angularaxis=dict(
-            rotation=90
-        )),
+                range=[0, 100]
+            )),
         showlegend=True,
-        title=f"Risk Chart for {category}",
+        title=f"Radar Chart for {category}",
         annotations=[dict(
             x=1.0,
             y=1.1,
@@ -309,8 +314,11 @@ for category in categories:
             showarrow=False,
             text="<br>".join(annotations),
             align="left"
-        )]
+        )],
+        plot_bgcolor='#e4effb',
+        font=dict(color='#454545')
     )
+    
     
     # Display the radar chart in Streamlit
     st.plotly_chart(fig)
