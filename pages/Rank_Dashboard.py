@@ -46,6 +46,7 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 # Add some spacing
 ''
 ''
+st.subheader("Competitive Dynamic Risk Ranking by Company")
 # Create a horizontal bar chart
 fig = go.Figure(data=[
     go.Bar(
@@ -61,7 +62,7 @@ fig = go.Figure(data=[
 
 # Update the layout to remove x-axis and show y-axis with company names
 fig.update_layout(
-    title='Rank by Company',
+    # title='Rank by Company',
     xaxis=dict(showgrid=False, zeroline=False, visible=False),
     yaxis=dict(showgrid=False, zeroline=False, visible=True, tickmode='array', tickvals=rank_company_df.index, ticktext=rank_company_df['Company']),
     template='plotly_white',
@@ -85,6 +86,7 @@ selected_companies = st.multiselect(
 
 ''
 ''
+st.subheader("Risk Rank based on Category")
 # Create a list of unique risk categories
 rank_cat = rank_cat_df['Risk Category'].unique()
 
@@ -114,7 +116,7 @@ fig.update_layout(
         )
     ),
     showlegend=True,
-    title="Risk Rank based on Category",
+    # title="Risk Rank based on Category",
     font=dict(color='#454545'),
     plot_bgcolor='#e4effb'
 )
@@ -123,6 +125,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 ''
 ''
+st.subheader("Risk Rank for each Category")
 # Create a subplot with 1 row and multiple columns (one for each company)
 fig = make_subplots(
     rows=1, 
