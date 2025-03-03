@@ -46,6 +46,15 @@ Capstone Project - LSE MPA in Data Science for Public Policy & United Nations Un
 # Add some spacing
 ''
 ''
+# Define a color map for each company
+color_map = {
+    'Anthropic': '#da7756',
+    'Google DeepMind': '#4285F4', #4285F4 022c61
+    'Meta AI': '#34b3f0', #34b3f0 1877F2
+    'OpenAI': '#00A67E',
+    'x.AI': '#000000'
+}
+
 st.subheader("Competitive Dynamic Risk Ranking by Company")
 # Create a horizontal bar chart
 fig = go.Figure(data=[
@@ -56,7 +65,7 @@ fig = go.Figure(data=[
         orientation='h',
         text=rank_company_df.index + 1,  # Add rank as text
         textposition='auto',
-        marker=dict(color='#009edb')
+        marker=dict(color=[color_map[company] for company in risk_company_df['Company']])
     )
 ])
 
@@ -101,7 +110,8 @@ for company in rank_comp:
         theta=rank_cat,
         connectgaps=True,
         fill='toself',
-        name=company
+        name=company,
+        line=dict(color=color_map[company])
     ))
 
 # Update the layout
@@ -150,7 +160,8 @@ for i, company in enumerate(selected_companies):
         theta=company_data['Risk Category'],
         connectgaps=True,
         fill='toself',
-        name=company
+        name=company,
+        line=dict(color=color_map[company])
     ), row=1, col=i+1)
 
 # Adjust the position of the subplot titles
@@ -197,7 +208,8 @@ for category in rank_cat:
             theta=company_data['Risk Indicator'].astype(str),
             connectgaps=True,
             fill='toself',
-            name=company
+            name=company,
+            line=dict(color=color_map[company])
         ))
 
     # Update the layout to move the legend to the bottom
