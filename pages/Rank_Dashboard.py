@@ -65,7 +65,7 @@ fig = go.Figure(data=[
         orientation='h',
         text=rank_company_df.index + 1,  # Add rank as text
         textposition='auto',
-        marker=dict(color=[color_map[company] for company in risk_company_df['Company']])
+        marker=dict(color=[color_map[company] for company in rank_company_df['Company']])
     )
 ])
 
