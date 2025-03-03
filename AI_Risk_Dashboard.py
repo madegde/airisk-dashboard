@@ -237,7 +237,7 @@ for i, company in enumerate(selected_companies):
     company_data = company_data.replace({
         'Risk Category': {
             "1. Hypercompetitive behavior": "Hypercompetitive",
-            "2. ​Lack of compliance and safety practices": "Unsafety",
+            "2. ​Lack of compliance and safety practices": "Lack of Safety",
             "3. Lack of commitment to emerging standards": "Lack of Commitment",
             "4. Incidents": "Incidents"
         }
