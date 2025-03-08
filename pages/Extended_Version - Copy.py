@@ -111,13 +111,13 @@ st.markdown("""
     }
     .lse-logo {
         justify-self: start;
-        max-width: 200px;
-        height: 50px;
+        width: auto;
+        max-height: 30px;
     }
     .un-logo {
         justify-self: end;
-        max-width: 180px;
-        height: 50px;
+        width: auto;
+        max-height: 30px;
     }
     @media (max-width: 768px) {
         .logo-container {
@@ -126,8 +126,8 @@ st.markdown("""
         }
         .lse-logo, .un-logo {
             justify-self: center;
-            max-width: 150px;
-            height:40px;
+            width: auto;
+            max-height: 25px;
         }
     }
 </style>
