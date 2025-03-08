@@ -382,7 +382,10 @@ with tab3:
     st.markdown("""
     <style>
         .table-container {
-            padding-top: 20px;
+            padding-top: 40px;
+        }
+        .dataframe {
+            margin-top: 40px !important;
         }
     </style>
     """, unsafe_allow_html=True)
