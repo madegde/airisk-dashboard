@@ -112,8 +112,8 @@ st.markdown("""
         justify-content: space-between;
     }
     .logo-img {
-        height: 50px;
-        max-width: 150px;
+        max-height: 100px;
+        width: auto;
     }
 </style>
 
