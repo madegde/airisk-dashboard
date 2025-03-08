@@ -111,13 +111,13 @@ st.markdown("""
     }
     .lse-logo {
         justify-self: start;
-        max-width: auto;
-        max-height: 75px;
+        max-width: 200px;
+        height: auto;
     }
     .un-logo {
         justify-self: end;
-        max-width: auto;
-        max-height: 75px
+        max-width: 180px;
+        height: auto;
     }
     @media (max-width: 768px) {
         .logo-container {
@@ -126,11 +126,11 @@ st.markdown("""
         }
         .lse-logo, .un-logo {
             justify-self: center;
-            max-height: 50px;
+            max-width: 150px;
         }
     }
 </style>
-
+            
 <div class="logo-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/London_school_of_economics_logo_with_name.svg" class="logo-img" alt="LSE Logo">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
