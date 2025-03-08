@@ -196,6 +196,7 @@ with gauge_container:
 # ========== COMPARATIVE ANALYSIS ==========
 st.markdown("---")
 st.markdown("### Comparative Score Analysis")
+tab1, tab2, tab3 = st.tabs(["📊 Score Comparisons", "🔍 Detailed Metrics", "📋 Tables"])
 
 companies = category_df['Company'].unique()
 selected_companies = st.multiselect(
@@ -204,8 +205,6 @@ selected_companies = st.multiselect(
     default=companies,
     help="Choose companies to analyze their risk profiles"
 )
-
-tab1, tab2, tab3 = st.tabs(["📊 Score Comparisons", "🔍 Detailed Metrics", "📋 Tables"])
 
 with tab1:
     # Risk Category Comparison
@@ -269,7 +268,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
 
 with tab2:
-    st.markdown('<div class="chart-header">Companies\' Chart Comparison</div>', unsafe_allow_html=True)
+    st.markdown('<div class="chart-header">Company Comparison</div>', unsafe_allow_html=True)
     # Company-specific Radar Charts
     if len(selected_companies) > 0:
         fig = make_subplots(
@@ -299,7 +298,7 @@ with tab2:
             ), 1, i+1)
         # Adjust the position of the subplot titles
         for annotation in fig['layout']['annotations']:
-            annotation['y'] += 0.1 
+            annotation['y'] += 0.3 
         
         # Update the layout
         for j in range(1, len(selected_companies) + 1):
@@ -397,6 +396,7 @@ with tab3:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: right; color: #7f8c8d; font-size: 0.9rem;">
-    Data Source: Monitoring AI Risk Report • Updated: March 2025
+    Data Source: Monitoring AI Risk Report <br/> 
+    Updated: March 2025
 </div>
 """, unsafe_allow_html=True)
