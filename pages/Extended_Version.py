@@ -40,7 +40,7 @@ color_map = {
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.title("AI Risk Extended Dashboard Extended Version")
+    st.title("AI Risk Dashboard Extended Version")
     st.markdown("---")
     st.markdown("**Color Legend**")
     for company, color in color_map.items():
