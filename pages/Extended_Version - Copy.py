@@ -43,15 +43,6 @@ with st.sidebar:
     st.title("AI Risk Dashboard")
     st.markdown("---")
     
-    # Company selection in sidebar
-    companies = category_df['Company'].unique()
-    selected_companies = st.multiselect(
-        'Select Companies to Compare',
-        companies,
-        default=companies,
-        help="Choose companies to analyze their risk profiles"
-    )
-    
     st.markdown("---")
     st.markdown("**Color Legend**")
     for company, color in color_map.items():
@@ -113,7 +104,8 @@ st.markdown("""
 <div style="text-align: center; margin-bottom: 2rem;">
     <h1>🌍 AI Risk Dashboard</h1>
     <p style="color: #7f8c8d; font-size: 1.1rem;">
-        Capstone Project - LSE MPA in Data Science for Public Policy<br>
+        Capstone Project <br> 
+        LSE MPA in Data Science for Public Policy & 
         United Nations University Centre for Policy Research (UNU-CPR)
     </p>
 </div>
@@ -123,9 +115,9 @@ st.markdown("""
 st.markdown("### Competitive Dynamics Risk Scores")
 with st.expander("Understanding Risk Scores", expanded=False):
     st.markdown("""
-    - **0-33**: Low Risk (Green)
-    - **34-66**: Moderate Risk (Yellow)
-    - **67-100**: High Risk (Red)
+    - **0-33**: Have Lower Risk among Companies (Green)
+    - **34-66**: Have Moderate Risk among Companies (Yellow)
+    - **67-100**: Have Higher Risk among Companies (Red)
     """)
 
 gauge_container = st.container()
@@ -136,38 +128,54 @@ with gauge_container:
             fig = go.Figure(go.Indicator(
                 mode="gauge+number",
                 value=row['Standardized Value'],
+                title={'text': f"{row['Company']}"},
                 gauge={
-                    'axis': {'range': [0, 100], 'tickwidth': 1},
-                    'bar': {'color': color_map[row['Company']]},
+                    'axis': {'range': [0, 100]},
+                    'bar': {'color': "whitesmoke"},
                     'steps': [
                         {'range': [0, 33], 'color': '#008450', },
                         {'range': [33, 66], 'color': '#EFB700', },
                         {'range': [66, 100], 'color': '#B81D13', }
                     ],
                     'threshold': {
-                        'line': {'color': 'white', 'width': 4},
-                        'thickness': 0.75,
+                        'line': {'color': 'whitesmoke', 'width': 4},
+                        'thickness': 0.69,
                         'value': row['Standardized Value']
-                    }
+                    },
+                    'bordercolor':'white',
                 },
-                number={'font': {'size': 24}}
+                # number={'font': {'size': 24}}
             ))
             fig.update_layout(
+                width=300 * len(risk_company_df),
                 height=300,
                 margin=dict(t=0, b=0),
-                font={'family': 'Roboto', 'color': '#2c3e50', 'size': 14}
+                font={'family': 'Roboto', 'color': '#454545'}
             )
             st.plotly_chart(fig, use_container_width=True)
 
 # ========== COMPARATIVE ANALYSIS ==========
+    
+# Company selection in sidebar
+companies = category_df['Company'].unique()
+if not len(companies):
+    st.warning("Select at least one company")
+selected_companies = st.multiselect(
+    'Which company would you like to view?',
+    companies,
+    default=companies,
+    help="Choose companies to analyze their risk profiles"
+    )
+''
+''
 st.markdown("---")
 st.markdown("### Comparative Risk Analysis")
 
-tab1, tab2 = st.tabs(["Category Breakdown", "Detailed Metrics"])
+tab1, tab2 = st.tabs(["#### Category Breakdown", "#### Detailed Metrics"])
 
 with tab1:
     # Risk Category Comparison
-    st.markdown("#### Risk Category Comparison")
+    st.markdown("##### Risk Category Comparison")
     fig = go.Figure()
     
     for company in selected_companies:
@@ -175,6 +183,7 @@ with tab1:
         fig.add_trace(go.Scatterpolar(
             r=company_data['Standardized Value'],
             theta=company_data['Risk Category'].str.replace(r'\d+\.\s*', '', regex=True),
+            connectgaps=True,
             fill='toself',
             name=company,
             line=dict(color=color_map[company], width=2),
@@ -190,13 +199,14 @@ with tab1:
         height=500,
         hovermode="x unified",
         font={'family': 'Roboto', 'color': '#454545'},
-        legend=dict(orientation="h", yanchor="bottom", y=1.02),
+        legend=dict(orientation="h", yanchor="bottom", y=-0.3,
+            xanchor="center",),
         margin=dict(t=40)
     )
     st.plotly_chart(fig, use_container_width=True)
 
     # Risk Indicator Comparison
-    st.markdown("#### Risk Indicator Comparison")
+    st.markdown("##### Risk Indicator Comparison")
     categories = category_df['Risk Category'].unique()
     
     for category in categories:
@@ -208,6 +218,7 @@ with tab1:
             fig.add_trace(go.Scatterpolar(
                 r=company_data['Standardized Value'],
                 theta=company_data['Risk Indicator'],
+                connectgaps=True,
                 fill='toself',
                 name=company,
                 line=dict(color=color_map[company]),
@@ -221,15 +232,45 @@ with tab1:
             ),
             title=category,
             font={'family': 'Roboto', 'color': '#454545'},
-            legend=dict(orientation="h", yanchor="bottom", y=-0.3),
+            legend=dict(orientation="h", yanchor="bottom", y=-0.3,
+            xanchor="center",),
             height=500,
             margin=dict(t=60)
         )
+        # # Add annotations for Risk ID and Risk Indicator
+        # annotations = []
+        # for risk_id, risk_indicator in zip(category_data['Risk ID'].unique(), category_data['Risk Indicator'].unique()):
+        #     annotations.append(f"{risk_id}: {risk_indicator}")
+        
+        # # Update the layout
+        # fig.update_layout(
+        #     polar=dict(
+        #         radialaxis=dict(
+        #             visible=True,
+        #             range=[0, 100]),
+        #     angularaxis=dict(
+        #         rotation=90
+        #     )),
+        #     showlegend=True,
+        #     title=f"{category}",
+        #     annotations=[dict(
+        #         x=1.0,
+        #         y=1.1,
+        #         xref="paper",
+        #         yref="paper",
+        #         showarrow=False,
+        #         text="<br>".join(annotations),
+        #         align="left"
+        #     )],
+        #     font=dict(color='#454545'),
+        #     plot_bgcolor='#e4effb'
+        # )
+    
         st.plotly_chart(fig, use_container_width=True)
 
 with tab2:
     # Detailed Category Analysis
-    st.markdown("#### Detailed Category Analysis")
+    st.markdown("##### Detailed Category Analysis")
     
     # Company-specific Radar Charts
     if len(selected_companies) > 0:
@@ -242,24 +283,44 @@ with tab2:
         
         for i, company in enumerate(selected_companies):
             company_data = category_df[category_df['Company'] == company]
+            company_data = company_data.replace({
+                'Risk Category': {
+                    "1. Hypercompetitive behavior": "Hypercompetitive",
+                    "2. ​Lack of compliance and safety practices": "Lack of Safety",
+                    "3. Lack of commitment to emerging standards": "Lack of Commitment",
+                    "4. Incidents": "Incidents"
+                }
+            })
             fig.add_trace(go.Scatterpolar(
                 r=company_data['Standardized Value'],
-                theta=company_data['Risk Category'].str.replace(r'\d+\.\s*', '', regex=True),
+                theta=company_data['Risk Category'],
+                connectgaps=True,
                 fill='toself',
                 line=dict(color=color_map[company]),
                 name=company
             ), 1, i+1)
+        # Adjust the position of the subplot titles
+        for annotation in fig['layout']['annotations']:
+            annotation['y'] += 0.1 
+        
+        # Update the layout
+        for j in range(1, len(selected_companies) + 1):
+            fig.update_layout(**{f'polar{j}': dict(
+                radialaxis=dict(visible=True, range=[0, 100]),
+                angularaxis=dict(rotation=90))
+            })
         
         fig.update_layout(
-            height=400,
+            width=250*len(selected_companies),
+            height=250 + 300/len(selected_companies),
             showlegend=False,
             font={'family': 'Roboto', 'color': '#454545'},
-            margin=dict(t=60)
+            margin=dict(t=20)
         )
         st.plotly_chart(fig, use_container_width=True)
     
     # Detailed Metric Analysis
-    st.markdown("#### Detailed Metric Analysis")
+    st.markdown("##### Detailed Metric Analysis")
     selected_category = st.selectbox(
         "Select Risk Category",
         category_df['Risk Category'].unique(),
