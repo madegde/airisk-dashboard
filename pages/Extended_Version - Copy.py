@@ -140,9 +140,9 @@ with gauge_container:
                     'axis': {'range': [0, 100], 'tickwidth': 1},
                     'bar': {'color': color_map[row['Company']]},
                     'steps': [
-                        {'range': [0, 33], 'color': '#008450', 'opacity': 0.3},
-                        {'range': [33, 66], 'color': '#EFB700', 'opacity': 0.3},
-                        {'range': [66, 100], 'color': '#B81D13', 'opacity': 0.3}
+                        {'range': [0, 33], 'color': '#008450', },
+                        {'range': [33, 66], 'color': '#EFB700', },
+                        {'range': [66, 100], 'color': '#B81D13', }
                     ],
                     'threshold': {
                         'line': {'color': 'white', 'width': 4},
