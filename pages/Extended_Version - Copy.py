@@ -112,7 +112,7 @@ st.markdown("""
         justify-content: space-between;
     }
     .logo-img {
-        height: auto;
+        height: 50px;
         max-width: 150px;
     }
 </style>
@@ -122,6 +122,7 @@ st.markdown("""
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
 </div>
 """, unsafe_allow_html=True)
+
 st.markdown("""
 <div style="text-align: center; margin-bottom: 2rem;">
     <h1>🌍 AI Risk Dashboard</h1>
