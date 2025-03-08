@@ -84,6 +84,53 @@ st.markdown("""
     .stPlotlyChart {
         border-radius: 8px;
     }
+            
+        /* Tab styling */
+    [data-testid="stTabs"] {
+        margin-top: 2rem;
+    }
+    
+    [data-testid="stTab"] {
+        padding: 15px 25px;
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease;
+    }
+
+    [data-testid="stTab"]:hover {
+        background-color: #f0f2f6;
+    }
+
+    [aria-selected="true"] {
+        color: #009edb !important;
+        border-bottom: 3px solid #009edb !important;
+    }
+
+    /* Chart headers */
+    .chart-header {
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+        color: #2c3e50 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Table enhancements */
+    .dataframe th {
+        background-color: #009edb !important;
+        color: white !important;
+        font-size: 1.1rem !important;
+    }
+
+    .dataframe td {
+        font-size: 1rem !important;
+    }
+
+    /* Metric cards */
+    .metric-value {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        color: #2c3e50 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -191,13 +238,13 @@ selected_companies = st.multiselect(
 ''
 ''
 st.markdown("---")
-st.markdown("### Comparative Risk Analysis")
+st.markdown("### Comparative Score Analysis")
 
-tab1, tab2, tab3 = st.tabs(["# Category Breakdown", "# Detailed Metrics", "# Tables"])
+tab1, tab2, tab3 = st.tabs(["📊 Score Comparisons", "🔍 Detailed Metrics", "📋 Tables"])
 
 with tab1:
     # Risk Category Comparison
-    st.markdown("#### Risk Category Comparison")
+    st.markdown('<div class="chart-header">Risk Category Comparison</div>', unsafe_allow_html=True)
     fig = go.Figure()
     
     for company in selected_companies:
@@ -211,7 +258,15 @@ with tab1:
             line=dict(color=color_map[company], width=2),
             hoverlabel=dict(font={'family': 'Roboto'})
         ))
-    
+    fig.update_layout(
+        title_font_size=20,
+        legend=dict(
+            font=dict(
+                size=14,
+                color="#2c3e50"
+            )
+        )
+    )
     fig.update_layout(
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 100]),
@@ -229,7 +284,8 @@ with tab1:
 
     # Risk Indicator Comparison
     st.markdown("---")
-    st.markdown("#### Risk Indicator Comparison")
+    st.markdown('<div class="chart-header">Risk Indicator Comparison</div>', unsafe_allow_html=True)
+    # st.markdown("#### Risk Indicator Comparison")
     categories = category_df['Risk Category'].unique()
     
     for category in categories:
@@ -247,7 +303,15 @@ with tab1:
                 line=dict(color=color_map[company]),
                 hoverlabel=dict(font={'family': 'Roboto'})
             ))
-        
+        fig.update_layout(
+            title_font_size=20,
+            legend=dict(
+                font=dict(
+                    size=14,
+                    color="#2c3e50"
+                )
+            )
+        )
         fig.update_layout(
             polar=dict(
                 radialaxis=dict(range=[0, 100]),
@@ -293,8 +357,8 @@ with tab1:
 
 with tab2:
     # Detailed Category Analysis
-    st.markdown("#### Detailed Category Analysis")
-    
+    # st.markdown("#### Detailed Category Analysis")
+    st.markdown('<div class="chart-header">Detailed Companies\' Scores</div>', unsafe_allow_html=True)
     # Company-specific Radar Charts
     if len(selected_companies) > 0:
         fig = make_subplots(
@@ -344,7 +408,8 @@ with tab2:
     
     # Detailed Metric Analysis
     st.markdown("---")
-    st.markdown("#### Detailed Metric Analysis")
+    st.markdown('<div class="chart-header">Detailed Risk Metrics</div>', unsafe_allow_html=True)
+    # st.markdown("#### Detailed Metric Analysis")
     selected_category = st.selectbox(
         "Select Risk Category",
         category_df['Risk Category'].unique(),
@@ -365,7 +430,17 @@ with tab2:
             hoverinfo='x+text',
             textposition='auto'
         ))
-    
+    fig.update_layout(
+        title_font_size=20,
+        xaxis=dict(
+            title_font=dict(size=16),
+            tickfont=dict(size=14)
+        ),
+        yaxis=dict(
+            title_font=dict(size=16),
+            tickfont=dict(size=14)
+        )
+    )
     fig.update_layout(
         barmode='group',
         height=500,
@@ -379,10 +454,10 @@ with tab2:
 
 
 with tab3:
-    st.markdown("#### Risk Category Data")
-    
+    # st.markdown("#### Risk Category Data")
+    st.markdown('<div class="chart-header">Risk Category Tables</div>', unsafe_allow_html=True)
     # Show category_df with scrollable container
-    with st.container(height=400):
+    with st.container(height=500):
         st.markdown("""
         <style>
             .table-container {
@@ -392,7 +467,14 @@ with tab3:
         """, unsafe_allow_html=True)
         st.dataframe(
             category_df,
+            category_df.style
+            .background_gradient(subset=['Standardized Value'], cmap='YlOrRd')
+            .set_properties(**{
+                'font-size': '14px',
+                'text-align': 'center'
+            }),
             use_container_width=True,
+            height=500,
             column_order=("Company", "Risk Category", "Standardized Value"),
             column_config={
                 "Standardized Value": st.column_config.ProgressColumn(
@@ -406,10 +488,10 @@ with tab3:
         )
     
     st.markdown("---")
-    st.markdown("#### Risk Indicator Data")
-    
+    # st.markdown("#### Risk Indicator Data")
+    st.markdown('<div class="chart-header">Risk Indicator Tables</div>', unsafe_allow_html=True)
     # Show indicator_df with horizontal scroll
-    with st.container(height=600):
+    with st.container(height=500):
         st.markdown("""
         <style>
             .table-container {
@@ -419,7 +501,14 @@ with tab3:
         """, unsafe_allow_html=True)
         st.dataframe(
             indicator_df,
+            indicator_df.style
+            .background_gradient(subset=['Standardized Value'], cmap='YlOrRd')
+            .set_properties(**{
+                'font-size': '14px',
+                'text-align': 'center'
+            }),
             use_container_width=True,
+            height=500,
             column_config={
                 "Risk ID": st.column_config.TextColumn(width="small"),
                 "Risk Indicator": st.column_config.TextColumn(width="large"),
