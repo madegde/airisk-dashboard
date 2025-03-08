@@ -379,6 +379,14 @@ with tab2:
 
 
 with tab3:
+    st.markdown("""
+    <style>
+        .table-container {
+            padding-top: 20px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
     st.markdown("#### Risk Category Data")
     
     # Show category_df with scrollable container
