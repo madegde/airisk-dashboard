@@ -104,7 +104,7 @@ st.markdown("""
 <style>
     .logo-container {
         position: fixed;
-        top: 10px;
+        top: 60px;
         left: 10px;
         right: 10px;
         z-index: 100;
@@ -112,7 +112,7 @@ st.markdown("""
         justify-content: space-between;
     }
     .logo-img {
-        max-height: 100px;
+        max-height: 50px;
         width: auto;
     }
 </style>
