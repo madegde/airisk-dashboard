@@ -379,21 +379,17 @@ with tab2:
 
 
 with tab3:
-    st.markdown("""
-    <style>
-        .table-container {
-            padding-top: 40px;
-        }
-        .dataframe {
-            margin-top: 40px !important;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-
     st.markdown("#### Risk Category Data")
     
     # Show category_df with scrollable container
     with st.container(height=400):
+        st.markdown("""
+        <style>
+            .table-container {
+                padding-top: 20px;
+            }
+        </style>
+        """, unsafe_allow_html=True)
         st.dataframe(
             category_df,
             use_container_width=True,
@@ -414,6 +410,13 @@ with tab3:
     
     # Show indicator_df with horizontal scroll
     with st.container(height=600):
+        st.markdown("""
+        <style>
+            .table-container {
+                padding-top: 20px;
+            }
+        </style>
+        """, unsafe_allow_html=True)
         st.dataframe(
             indicator_df,
             use_container_width=True,
