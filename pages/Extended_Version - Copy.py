@@ -103,35 +103,21 @@ def get_risk_color(value):
 st.markdown("""
 <style>
     .logo-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
     }
-    .lse-logo {
-        justify-self: start;
+    .logo-img {
+        max-height: 75px;
         width: auto;
-        max-height: 30px;
-    }
-    .un-logo {
-        justify-self: end;
-        width: auto;
-        max-height: 30px;
-    }
-    @media (max-width: 768px) {
-        .logo-container {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-        .lse-logo, .un-logo {
-            justify-self: center;
-            width: auto;
-            max-height: 25px;
-        }
     }
 </style>
-            
+  
 <div class="logo-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/London_school_of_economics_logo_with_name.svg" class="logo-img" alt="LSE Logo">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
