@@ -42,8 +42,6 @@ color_map = {
 with st.sidebar:
     st.title("AI Risk Dashboard")
     st.markdown("---")
-    
-    st.markdown("---")
     st.markdown("**Color Legend**")
     for company, color in color_map.items():
         st.markdown(f"<span style='color: {color};'>■</span> {company}", unsafe_allow_html=True)
@@ -195,7 +193,7 @@ selected_companies = st.multiselect(
 st.markdown("---")
 st.markdown("### Comparative Risk Analysis")
 
-tab1, tab2 = st.tabs(["### Category Breakdown", "### Detailed Metrics"])
+tab1, tab2, tab3 = st.tabs(["# Category Breakdown", "# Detailed Metrics", "# Tables"])
 
 with tab1:
     # Risk Category Comparison
@@ -230,6 +228,7 @@ with tab1:
     st.plotly_chart(fig, use_container_width=True)
 
     # Risk Indicator Comparison
+    st.markdown("---")
     st.markdown("#### Risk Indicator Comparison")
     categories = category_df['Risk Category'].unique()
     
@@ -344,6 +343,7 @@ with tab2:
         st.plotly_chart(fig, use_container_width=True)
     
     # Detailed Metric Analysis
+    st.markdown("---")
     st.markdown("#### Detailed Metric Analysis")
     selected_category = st.selectbox(
         "Select Risk Category",
@@ -377,6 +377,47 @@ with tab2:
     )
     st.plotly_chart(fig, use_container_width=True)
 
+
+with tab3:
+    st.markdown("#### Risk Category Data")
+    
+    # Show category_df with scrollable container
+    with st.container(height=400):
+        st.dataframe(
+            category_df,
+            use_container_width=True,
+            column_order=("Company", "Risk Category", "Standardized Value"),
+            column_config={
+                "Standardized Value": st.column_config.ProgressColumn(
+                    "Risk Score",
+                    help="Risk score percentage",
+                    format="%.2f",
+                    min_value=0,
+                    max_value=100,
+                )
+            }
+        )
+    
+    st.markdown("---")
+    st.markdown("#### Risk Indicator Data")
+    
+    # Show indicator_df with horizontal scroll
+    with st.container(height=600):
+        st.dataframe(
+            indicator_df,
+            use_container_width=True,
+            column_config={
+                "Risk ID": st.column_config.TextColumn(width="small"),
+                "Risk Indicator": st.column_config.TextColumn(width="large"),
+                "Standardized Value": st.column_config.ProgressColumn(
+                    "Score",
+                    format="%.2f",
+                    min_value=0,
+                    max_value=100,
+                )
+            },
+            hide_index=True
+        )
 # ========== FOOTER ==========
 st.markdown("---")
 st.markdown("""
