@@ -101,12 +101,34 @@ def get_risk_color(value):
 
 # ========== MAIN CONTENT ==========
 st.markdown("""
+<style>
+    .logo-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-img {
+        height: auto;
+        max-width: 150px;
+    }
+</style>
+
+<div class="logo-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/London_school_of_economics_logo_with_name.svg" class="logo-img" alt="LSE Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
+</div>
+""", unsafe_allow_html=True)
+st.markdown("""
 <div style="text-align: center; margin-bottom: 2rem;">
     <h1>🌍 AI Risk Dashboard</h1>
     <p style="color: #7f8c8d; font-size: 1.1rem;">
         Capstone Project <br> 
-        LSE MPA in Data Science for Public Policy & 
-        United Nations University Centre for Policy Research (UNU-CPR)
+        LSE - MPA in Data Science for Public Policy & 
+        United Nations University - Centre for Policy Research (UNU-CPR)
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -171,11 +193,11 @@ selected_companies = st.multiselect(
 st.markdown("---")
 st.markdown("### Comparative Risk Analysis")
 
-tab1, tab2 = st.tabs(["#### Category Breakdown", "#### Detailed Metrics"])
+tab1, tab2 = st.tabs(["### Category Breakdown", "### Detailed Metrics"])
 
 with tab1:
     # Risk Category Comparison
-    st.markdown("##### Risk Category Comparison")
+    st.markdown("#### Risk Category Comparison")
     fig = go.Figure()
     
     for company in selected_companies:
@@ -200,13 +222,13 @@ with tab1:
         hovermode="x unified",
         font={'family': 'Roboto', 'color': '#454545'},
         legend=dict(orientation="h", yanchor="bottom", y=-0.3,
-            xanchor="center",),
+            xanchor="center",x=0.5),
         margin=dict(t=40)
     )
     st.plotly_chart(fig, use_container_width=True)
 
     # Risk Indicator Comparison
-    st.markdown("##### Risk Indicator Comparison")
+    st.markdown("#### Risk Indicator Comparison")
     categories = category_df['Risk Category'].unique()
     
     for category in categories:
@@ -233,7 +255,7 @@ with tab1:
             title=category,
             font={'family': 'Roboto', 'color': '#454545'},
             legend=dict(orientation="h", yanchor="bottom", y=-0.3,
-            xanchor="center",),
+            xanchor="center",x=0.5),
             height=500,
             margin=dict(t=60)
         )
@@ -270,7 +292,7 @@ with tab1:
 
 with tab2:
     # Detailed Category Analysis
-    st.markdown("##### Detailed Category Analysis")
+    st.markdown("#### Detailed Category Analysis")
     
     # Company-specific Radar Charts
     if len(selected_companies) > 0:
@@ -311,16 +333,16 @@ with tab2:
             })
         
         fig.update_layout(
-            width=250*len(selected_companies),
-            height=250 + 300/len(selected_companies),
+            width=200*len(selected_companies),
+            height=200 + 300/len(selected_companies),
             showlegend=False,
             font={'family': 'Roboto', 'color': '#454545'},
-            margin=dict(t=20)
+            margin=dict(t=60)
         )
         st.plotly_chart(fig, use_container_width=True)
     
     # Detailed Metric Analysis
-    st.markdown("##### Detailed Metric Analysis")
+    st.markdown("#### Detailed Metric Analysis")
     selected_category = st.selectbox(
         "Select Risk Category",
         category_df['Risk Category'].unique(),
@@ -357,6 +379,6 @@ with tab2:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #7f8c8d; font-size: 0.9rem; padding: 1rem;">
-    Data Source: Monitoring AI Risk Report • Updated: March 2024
+    Data Source: Monitoring AI Risk Report • Updated: March 2025
 </div>
 """, unsafe_allow_html=True)
