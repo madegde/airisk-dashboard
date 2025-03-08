@@ -103,17 +103,31 @@ def get_risk_color(value):
 st.markdown("""
 <style>
     .logo-container {
-        position: fixed;
-        top: 60px;
-        left: 10px;
-        right: 10px;
-        z-index: 100;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 2rem;
     }
-    .logo-img {
-        max-height: 50px;
-        width: auto;
+    .lse-logo {
+        justify-self: start;
+        max-width: auto;
+        max-height: 75px;
+    }
+    .un-logo {
+        justify-self: end;
+        max-width: auto;
+        max-height: 75px
+    }
+    @media (max-width: 768px) {
+        .logo-container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .lse-logo, .un-logo {
+            justify-self: center;
+            max-height: 50px;
+        }
     }
 </style>
 
