@@ -132,6 +132,24 @@ st.markdown("""
         max-height: 75px;
         width: auto;
     }
+    .quote-box {
+        border-left: 4px solid #009edb;
+        background-color: #f0f9ff;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 4px;
+        color: #2c3e50;
+        position: relative;
+        min-height: 120px;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-style: normal;
+        font-size: 0.9em;
+        color: #6c757d;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -154,6 +172,18 @@ st.markdown("""
 
 # ========== GAUGE SECTION ==========
 st.markdown("### Competitive Dynamics Risk Scores")
+st.markdown("""
+<div class="quote-box">
+    <div style="font-style: italic; margin-bottom: 30px;">
+        "Competitive Dynamics" — AI developers or state-like actors competing in an AI ‘race’ 
+        by rapidly developing, deploying, and applying AI systems to maximize strategic 
+        or economic advantage, increasing the risk they release unsafe and error-prone systems.
+    </div>
+    <div class="attribution">
+        - MIT AI Risk Repository
+    </div>
+</div>
+""", unsafe_allow_html=True)
 with st.expander("Understanding Risk Scores", expanded=False):
     st.markdown("""
     - **0-33**: Have Lower Risk among Companies (Green)
