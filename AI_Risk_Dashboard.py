@@ -139,7 +139,7 @@ st.markdown("""
 st.markdown("""
 <div class="logo-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/London_school_of_economics_logo_with_name.svg" class="logo-img" alt="LSE Logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
+    <img src="https://unu.edu/sites/default/files/2023-03/UNU-CPR_LOGO_NV.svg" class="logo-img" alt="UNU Logo">
 </div>
 
 <div style="text-align: center; margin-bottom: 2rem;">
