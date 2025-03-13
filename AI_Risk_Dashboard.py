@@ -161,7 +161,7 @@ st.markdown("""
 </div>
 
 <div style="text-align: center; margin-bottom: 2rem;">
-    <h1>🌍 AI Risk Dashboard</h1>
+    <h1>AI Risk Dashboard</h1>
     <p style="color: #7f8c8d; font-size: 1.1rem;">
         Capstone Project <br> 
         LSE - MPA in Data Science for Public Policy & 
@@ -428,7 +428,7 @@ with tab3:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: right; color: #7f8c8d; font-size: 0.9rem;">
-    Data Source: Monitoring AI Risk Report <br/> 
+    Data Source: Monitoring AI Risk: Corporate Competitive Dynamics - Capstone Project Report <br/> 
     Updated: March 2025
 </div>
 """, unsafe_allow_html=True)

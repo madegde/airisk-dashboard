@@ -132,6 +132,24 @@ st.markdown("""
         max-height: 75px;
         width: auto;
     }
+    .quote-box {
+        border-left: 4px solid #009edb;
+        background-color: #f0f9ff;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 4px;
+        color: #2c3e50;
+        position: relative;
+        min-height: 120px;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-style: normal;
+        font-size: 0.9em;
+        color: #6c757d;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -139,11 +157,11 @@ st.markdown("""
 st.markdown("""
 <div class="logo-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/London_school_of_economics_logo_with_name.svg" class="logo-img" alt="LSE Logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo_of_the_United_Nations.svg" class="logo-img" alt="UN Logo">
+    <img src="https://unu.edu/sites/default/files/2023-03/UNU-CPR_LOGO_NV.svg" class="logo-img" alt="UNU Logo">
 </div>
 
 <div style="text-align: center; margin-bottom: 2rem;">
-    <h1>🌍 AI Risk Dashboard</h1>
+    <h1>AI Risk Dashboard</h1>
     <h3>Extended Version</h3>
     <p style="color: #7f8c8d; font-size: 1.1rem;">
         Capstone Project <br> 
@@ -156,6 +174,18 @@ st.markdown("""
 # ========== GAUGE SECTION ==========
 st.markdown("### Competitive Dynamics Risk Scores")
 with st.expander("Understanding Risk Scores", expanded=False):
+    st.markdown("""
+    <div class="quote-box">
+        <div style="font-style: italic; margin-bottom: 30px;">
+            "Competitive Dynamics" — AI developers or state-like actors competing in an AI ‘race’ 
+            by rapidly developing, deploying, and applying AI systems to maximize strategic 
+            or economic advantage, increasing the risk they release unsafe and error-prone systems.
+        </div>
+        <div class="attribution">
+            - MIT AI Risk Repository
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("""
     - **0-33**: Have Lower Risk among Companies (Green)
     - **34-66**: Have Moderate Risk among Companies (Yellow)
@@ -397,8 +427,8 @@ with tab3:
 # ========== FOOTER ==========
 st.markdown("---")
 st.markdown("""
-<div style="text-align: right; color: #7f8c8d; font-size: 0.9rem;">
-    Data Source: Monitoring AI Risk Report <br/> 
+<div style="text-align: left; color: #7f8c8d; font-size: 0.9rem;">
+    Data Source: Monitoring AI Risk: Corporate Competitive Dynamics - Capstone Project Report <br/> 
     Updated: March 2025
 </div>
 """, unsafe_allow_html=True)
