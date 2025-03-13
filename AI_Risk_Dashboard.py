@@ -427,7 +427,7 @@ with tab3:
 # ========== FOOTER ==========
 st.markdown("---")
 st.markdown("""
-<div style="text-align: right; color: #7f8c8d; font-size: 0.9rem;">
+<div style="text-align: left; color: #7f8c8d; font-size: 0.9rem;">
     Data Source: Monitoring AI Risk: Corporate Competitive Dynamics - Capstone Project Report <br/> 
     Updated: March 2025
 </div>
