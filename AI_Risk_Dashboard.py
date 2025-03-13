@@ -172,19 +172,20 @@ st.markdown("""
 
 # ========== GAUGE SECTION ==========
 st.markdown("### Competitive Dynamics Risk Scores")
-st.markdown("""
-<div class="quote-box">
-    <div style="font-style: italic; margin-bottom: 30px;">
-        "Competitive Dynamics" — AI developers or state-like actors competing in an AI ‘race’ 
-        by rapidly developing, deploying, and applying AI systems to maximize strategic 
-        or economic advantage, increasing the risk they release unsafe and error-prone systems.
-    </div>
-    <div class="attribution">
-        - MIT AI Risk Repository
-    </div>
-</div>
-""", unsafe_allow_html=True)
+
 with st.expander("Understanding Risk Scores", expanded=False):
+    st.markdown("""
+    <div class="quote-box">
+        <div style="font-style: italic; margin-bottom: 30px;">
+            "Competitive Dynamics" — AI developers or state-like actors competing in an AI ‘race’ 
+            by rapidly developing, deploying, and applying AI systems to maximize strategic 
+            or economic advantage, increasing the risk they release unsafe and error-prone systems.
+        </div>
+        <div class="attribution">
+            - MIT AI Risk Repository
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("""
     - **0-33**: Have Lower Risk among Companies (Green)
     - **34-66**: Have Moderate Risk among Companies (Yellow)
