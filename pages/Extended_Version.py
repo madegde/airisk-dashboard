@@ -379,8 +379,8 @@ with tab2:
     )
     st.plotly_chart(fig, use_container_width=True)
     with st.expander("Understanding Scoring Methodology", expanded=False):
-    st.markdown("""
-    The scoring method uses a min-max scaler to rate companies by risk. For each risk indicator, we take a company’s measurement, subtract by the lowest value across all companies, divide by the difference between the highest and lowest values, and multiply by 100. This gives a 0-100 score showing how the company compare to others.""")
+        st.markdown("""
+        The scoring method uses a min-max scaler to rate companies by risk. For each risk indicator, we take a company’s measurement, subtract by the lowest value across all companies, divide by the difference between the highest and lowest values, and multiply by 100. This gives a 0-100 score showing how the company compare to others.""")
 
 with tab3:
     st.markdown('<div class="chart-header">Data Tables</div>', unsafe_allow_html=True)
