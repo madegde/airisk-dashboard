@@ -1,13 +1,13 @@
 Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
-1. Hypercompetitive behavior,1.01,Valuation growth (%),Google DeepMind,0.356217063096425,0.0
-1. Hypercompetitive behavior,1.02,Market share (revenue),Google DeepMind,0.07,84.18837148118917
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),Google DeepMind,3.89218329,0.0
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",Google DeepMind,0.0,0.0
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",Google DeepMind,0.0,0.0
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",Google DeepMind,9500000.0,1.239399869536856
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",Google DeepMind,1.0,20.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",Google DeepMind,0.63,12.238805970149254
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,Google DeepMind,134.6582575457273,61.86367322181039
+1. Hypercompetitive behaviour,1.01,Valuation growth (%),Google DeepMind,0.356217063096425,0.0
+1. Hypercompetitive behaviour,1.02,Market share (revenue),Google DeepMind,0.07,84.18837148118917
+1. Hypercompetitive behaviour,1.03,Acceleration (change in model updates frequency),Google DeepMind,3.89218329,0.0
+1. Hypercompetitive behaviour,1.04,"Acquisitions - annual, count",Google DeepMind,0.0,0.0
+1. Hypercompetitive behaviour,1.05,"Acquisitions - annual, cost",Google DeepMind,0.0,0.0
+1. Hypercompetitive behaviour,1.06,"Total investments made by the company, value",Google DeepMind,9500000.0,1.239399869536856
+1. Hypercompetitive behaviour,1.07,"Investments made by the company, count",Google DeepMind,1.0,20.0
+1. Hypercompetitive behaviour,1.08,"Revenue growth rate (YoY, %)",Google DeepMind,0.63,12.238805970149254
+1. Hypercompetitive behaviour,1.09,Anti-competition: News based index,Google DeepMind,134.6582575457273,61.86367322181039
 2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",Google DeepMind,0.0027910685805422647,100.0
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Google DeepMind,1.0,88.88888888888889
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Google DeepMind,9.0,0.0
@@ -21,21 +21,20 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Google DeepMind,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Google DeepMind,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Google DeepMind,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Google DeepMind,80.29222837209302,11.22201780347612
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Google DeepMind,80.29222837209302,11.22201780347612
 4. Incidents,4.01,AI-related incidents,Google DeepMind,15.0,46.42857142857143
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Google DeepMind,0.0,0.0
 4. Incidents,4.03,Litigation Frequency as Defendant,Google DeepMind,6.0,33.33333333333333
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Google DeepMind,1.0,5.555555555555555
-4. Incidents,4.05,Outsourcing incidents*,Google DeepMind,0.0,0.0
-1. Hypercompetitive behavior,1.01,Valuation growth (%),Anthropic,14.0,99.99999999999999
-1. Hypercompetitive behavior,1.02,Market share (revenue),Anthropic,0.02,97.34280452512496
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),Anthropic,-0.43915344,100.0
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",Anthropic,0.0,0.0
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",Anthropic,0.0,0.0
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",Anthropic,10000000.0,1.3046314416177431
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",Anthropic,1.0,20.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",Anthropic,3.57,100.0
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,Anthropic,100.0,0.0
+1. Hypercompetitive behaviour,1.01,Valuation growth (%),Anthropic,14.0,99.99999999999999
+1. Hypercompetitive behaviour,1.02,Market share (revenue),Anthropic,0.02,97.34280452512496
+1. Hypercompetitive behaviour,1.03,Acceleration (change in model updates frequency),Anthropic,-0.43915344,100.0
+1. Hypercompetitive behaviour,1.04,"Acquisitions - annual, count",Anthropic,0.0,0.0
+1. Hypercompetitive behaviour,1.05,"Acquisitions - annual, cost",Anthropic,0.0,0.0
+1. Hypercompetitive behaviour,1.06,"Total investments made by the company, value",Anthropic,10000000.0,1.3046314416177431
+1. Hypercompetitive behaviour,1.07,"Investments made by the company, count",Anthropic,1.0,20.0
+1. Hypercompetitive behaviour,1.08,"Revenue growth rate (YoY, %)",Anthropic,3.57,100.0
+1. Hypercompetitive behaviour,1.09,Anti-competition: News based index,Anthropic,100.0,0.0
 2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",Anthropic,0.021570319240724764,0.0
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Anthropic,6.0,33.33333333333334
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Anthropic,9.0,0.0
@@ -49,21 +48,20 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Anthropic,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Anthropic,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Anthropic,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Anthropic,90.44160093023255,0.0
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Anthropic,90.44160093023255,0.0
 4. Incidents,4.01,AI-related incidents,Anthropic,2.0,0.0
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Anthropic,0.0,0.0
 4. Incidents,4.03,Litigation Frequency as Defendant,Anthropic,1.0,5.555555555555555
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Anthropic,0.0,0.0
-4. Incidents,4.05,Outsourcing incidents*,Anthropic,0.0,0.0
-1. Hypercompetitive behavior,1.01,Valuation growth (%),Meta AI,0.660456014973626,2.2298724135686623
-1. Hypercompetitive behavior,1.02,Market share (revenue),Meta AI,0.0099,100.0
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),Meta AI,0.68092105,74.14021213723552
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",Meta AI,2.0,66.66666666666666
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",Meta AI,16300000000.0,100.0
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",Meta AI,0.0,0.0
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",Meta AI,0.0,0.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",Meta AI,0.22,0.0
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,Meta AI,100.0,0.0
+1. Hypercompetitive behaviour,1.01,Valuation growth (%),Meta AI,0.660456014973626,2.2298724135686623
+1. Hypercompetitive behaviour,1.02,Market share (revenue),Meta AI,0.0099,100.0
+1. Hypercompetitive behaviour,1.03,Acceleration (change in model updates frequency),Meta AI,0.68092105,74.14021213723552
+1. Hypercompetitive behaviour,1.04,"Acquisitions - annual, count",Meta AI,2.0,66.66666666666666
+1. Hypercompetitive behaviour,1.05,"Acquisitions - annual, cost",Meta AI,16300000000.0,100.0
+1. Hypercompetitive behaviour,1.06,"Total investments made by the company, value",Meta AI,0.0,0.0
+1. Hypercompetitive behaviour,1.07,"Investments made by the company, count",Meta AI,0.0,0.0
+1. Hypercompetitive behaviour,1.08,"Revenue growth rate (YoY, %)",Meta AI,0.22,0.0
+1. Hypercompetitive behaviour,1.09,Anti-competition: News based index,Meta AI,100.0,0.0
 2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",Meta AI,0.012857142857142857,46.39789170105914
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,Meta AI,2.0,77.77777777777777
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,Meta AI,5.0,44.44444444444444
@@ -77,49 +75,47 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,Meta AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,Meta AI,0.0,100.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,Meta AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,Meta AI,47.1430888372093,47.87455291334803
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,Meta AI,47.1430888372093,47.87455291334803
 4. Incidents,4.01,AI-related incidents,Meta AI,22.0,71.42857142857143
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Meta AI,0.0,0.0
 4. Incidents,4.03,Litigation Frequency as Defendant,Meta AI,1.0,5.555555555555555
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Meta AI,1.0,5.555555555555555
-4. Incidents,4.05,Outsourcing incidents*,Meta AI,0.0,0.0
-1. Hypercompetitive behavior,1.01,Valuation growth (%),x.AI,,
-1. Hypercompetitive behavior,1.02,Market share (revenue),x.AI,0.0099,100.0
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),x.AI,,
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",x.AI,1.0,33.33333333333333
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",x.AI,,
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",x.AI,0.0,0.0
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",x.AI,0.0,0.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",x.AI,,
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,x.AI,100.0,0.0
-2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",x.AI,0.01,61.61225200139228
-2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels,x.AI,1.0,100.0
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP),x.AI,0.35,100.0
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability,x.AI,0.57,100.0
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications,x.AI,2.23,0.0
-2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,x.AI,0.35,12.85714285714285
-3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,x.AI,0.0,100.0
-4. Incidents,4.01,AI-related incidents,x.AI,14.0,42.85714285714286
-4. Incidents,4.02,Cybersecurity incidents (related to security/safety),x.AI,0.0,0.0
-4. Incidents,4.03,Litigation Frequency as Defendant,x.AI,0.0,0.0
-4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),x.AI,4.0,22.22222222222222
-4. Incidents,4.05,Outsourcing incidents*,x.AI,0.0,0.0
-1. Hypercompetitive behavior,1.01,Valuation growth (%),OpenAI,4.41379310344827,29.73937696836961
-1. Hypercompetitive behavior,1.02,Market share (revenue),OpenAI,0.39,0.0
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.33808127,97.6664901322507
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",OpenAI,3.0,100.0
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",OpenAI,119000000.0,0.7300613496932515
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",OpenAI,766500000.0,100.0
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",OpenAI,5.0,100.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",OpenAI,1.3125,32.61194029850746
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,OpenAI,156.0236011551741,100.0
+1. Hypercompetitive behaviour,1.01,Valuation growth (%),xAI,,
+1. Hypercompetitive behaviour,1.02,Market share (revenue),xAI,0.0099,100.0
+1. Hypercompetitive behaviour,1.03,Acceleration (change in model updates frequency),xAI,,
+1. Hypercompetitive behaviour,1.04,"Acquisitions - annual, count",xAI,1.0,33.33333333333333
+1. Hypercompetitive behaviour,1.05,"Acquisitions - annual, cost",xAI,,
+1. Hypercompetitive behaviour,1.06,"Total investments made by the company, value",xAI,0.0,0.0
+1. Hypercompetitive behaviour,1.07,"Investments made by the company, count",xAI,0.0,0.0
+1. Hypercompetitive behaviour,1.08,"Revenue growth rate (YoY, %)",xAI,,
+1. Hypercompetitive behaviour,1.09,Anti-competition: News based index,xAI,100.0,0.0
+2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",xAI,0.01,61.61225200139228
+2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,xAI,0.0,0.0
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels,xAI,1.0,100.0
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP),xAI,0.35,100.0
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability,xAI,0.57,100.0
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications,xAI,2.23,0.0
+2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,xAI,0.35,12.85714285714285
+3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,xAI,0.0,100.0
+3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,xAI,0.0,100.0
+3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,xAI,0.0,100.0
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,xAI,0.0,100.0
+4. Incidents,4.01,AI-related incidents,xAI,14.0,42.85714285714286
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),xAI,0.0,0.0
+4. Incidents,4.03,Litigation Frequency as Defendant,xAI,0.0,0.0
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),xAI,4.0,22.22222222222222
+1. Hypercompetitive behaviour,1.01,Valuation growth (%),OpenAI,4.41379310344827,29.73937696836961
+1. Hypercompetitive behaviour,1.02,Market share (revenue),OpenAI,0.39,0.0
+1. Hypercompetitive behaviour,1.03,Acceleration (change in model updates frequency),OpenAI,-0.33808127,97.6664901322507
+1. Hypercompetitive behaviour,1.04,"Acquisitions - annual, count",OpenAI,3.0,100.0
+1. Hypercompetitive behaviour,1.05,"Acquisitions - annual, cost",OpenAI,119000000.0,0.7300613496932515
+1. Hypercompetitive behaviour,1.06,"Total investments made by the company, value",OpenAI,766500000.0,100.0
+1. Hypercompetitive behaviour,1.07,"Investments made by the company, count",OpenAI,5.0,100.0
+1. Hypercompetitive behaviour,1.08,"Revenue growth rate (YoY, %)",OpenAI,1.3125,32.61194029850746
+1. Hypercompetitive behaviour,1.09,Anti-competition: News based index,OpenAI,156.0236011551741,100.0
 2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",OpenAI,0.006329113924050633,81.15981618473171
 2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,OpenAI,9.0,0.0
 2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,OpenAI,7.0,22.22222222222223
@@ -133,9 +129,8 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,OpenAI,1.0,0.0
 3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,OpenAI,1.0,0.0
 3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,OpenAI,0.0,100.0
-3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments*,OpenAI,74.00396837209303,18.174858017849175
+3. Lack of commitment to emerging standards,3.04,Effective implementation of Frontier AI Safety Commitments,OpenAI,74.00396837209303,18.174858017849175
 4. Incidents,4.01,AI-related incidents,OpenAI,30.0,100.0
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),OpenAI,2.0,100.0
 4. Incidents,4.03,Litigation Frequency as Defendant,OpenAI,18.0,100.0
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),OpenAI,18.0,100.0
-4. Incidents,4.05,Outsourcing incidents*,OpenAI,1.0,100.0

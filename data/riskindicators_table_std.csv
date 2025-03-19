@@ -77,32 +77,32 @@ Risk Category,Risk ID,Risk Indicator,Company,Value,Standardized Value
 4. Incidents,4.02,Cybersecurity incidents (related to security/safety),Meta AI,0.0,0.0
 4. Incidents,4.03,Litigation Frequency as Defendant,Meta AI,1.0,5.555555555555555
 4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),Meta AI,1.0,5.555555555555555
-1. Hypercompetitive behavior,1.01,Valuation growth (%),x.AI,,
-1. Hypercompetitive behavior,1.02,Market share (revenue),x.AI,0.0099,100.0
-1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),x.AI,,
-1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",x.AI,1.0,33.33333333333333
-1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",x.AI,,
-1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",x.AI,0.0,0.0
-1. Hypercompetitive behavior,1.07,"Investments made by the company, count",x.AI,0.0,0.0
-1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",x.AI,,
-1. Hypercompetitive behavior,1.09,Anti-competition: News based index,x.AI,100.0,0.0
-2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",x.AI,0.01,61.61225200139228
-2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,x.AI,0.0,0.0
-2. ​Lack of compliance and safety practices,2.05,Risk Assessment,x.AI,0.0,100.0
-2. ​Lack of compliance and safety practices,2.06,Current Safety Levels,x.AI,1.0,100.0
-2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP),x.AI,0.35,100.0
-2. ​Lack of compliance and safety practices,2.08,Governance & Accountability,x.AI,0.57,100.0
-2. ​Lack of compliance and safety practices,2.09,Transparency & Communications,x.AI,2.23,0.0
-2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,x.AI,0.35,12.85714285714285
-3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,x.AI,0.0,100.0
-3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,x.AI,0.0,100.0
-4. Incidents,4.01,AI-related incidents,x.AI,14.0,42.85714285714286
-4. Incidents,4.02,Cybersecurity incidents (related to security/safety),x.AI,0.0,0.0
-4. Incidents,4.03,Litigation Frequency as Defendant,x.AI,0.0,0.0
-4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),x.AI,4.0,22.22222222222222
+1. Hypercompetitive behavior,1.01,Valuation growth (%),xAI,,
+1. Hypercompetitive behavior,1.02,Market share (revenue),xAI,0.0099,100.0
+1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),xAI,,
+1. Hypercompetitive behavior,1.04,"Acquisitions - annual, count",xAI,1.0,33.33333333333333
+1. Hypercompetitive behavior,1.05,"Acquisitions - annual, cost",xAI,,
+1. Hypercompetitive behavior,1.06,"Total investments made by the company, amount ($)",xAI,0.0,0.0
+1. Hypercompetitive behavior,1.07,"Investments made by the company, count",xAI,0.0,0.0
+1. Hypercompetitive behavior,1.08,"Revenue growth rate (YoY, %)",xAI,,
+1. Hypercompetitive behavior,1.09,Anti-competition: News based index,xAI,100.0,0.0
+2. ​Lack of compliance and safety practices,2.01,"""Safety"" head-count as a share of total staff",xAI,0.01,61.61225200139228
+2. ​Lack of compliance and safety practices,2.02,Number of initiatives related to AI safety annually,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.03,Publication of safety-related research findings annually,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.04,Involved in military-related industries,xAI,0.0,0.0
+2. ​Lack of compliance and safety practices,2.05,Risk Assessment,xAI,0.0,100.0
+2. ​Lack of compliance and safety practices,2.06,Current Safety Levels,xAI,1.0,100.0
+2. ​Lack of compliance and safety practices,2.07,Quality of Responsible Scaling Policy (RSP),xAI,0.35,100.0
+2. ​Lack of compliance and safety practices,2.08,Governance & Accountability,xAI,0.57,100.0
+2. ​Lack of compliance and safety practices,2.09,Transparency & Communications,xAI,2.23,0.0
+2. ​Lack of compliance and safety practices,2.1,Existential Safety Strategy,xAI,0.35,12.85714285714285
+3. Lack of commitment to emerging standards,3.01,Effective implementation of agreement in place with AISI,xAI,0.0,100.0
+3. Lack of commitment to emerging standards,3.02,Endorsement of G7 Hiroshima Code of Conduct,xAI,0.0,100.0
+3. Lack of commitment to emerging standards,3.03,Endorsement of UN Global Digital Compact,xAI,0.0,100.0
+4. Incidents,4.01,AI-related incidents,xAI,14.0,42.85714285714286
+4. Incidents,4.02,Cybersecurity incidents (related to security/safety),xAI,0.0,0.0
+4. Incidents,4.03,Litigation Frequency as Defendant,xAI,0.0,0.0
+4. Incidents,4.04,Common Vulnerabilities and Exposures (CVE),xAI,4.0,22.22222222222222
 1. Hypercompetitive behavior,1.01,Valuation growth (%),OpenAI,4.41379310344827,29.73937696836961
 1. Hypercompetitive behavior,1.02,Market share (revenue),OpenAI,0.39,0.0
 1. Hypercompetitive behavior,1.03,Acceleration (yoy change in model updates frequency),OpenAI,-0.33808127,97.6664901322507
