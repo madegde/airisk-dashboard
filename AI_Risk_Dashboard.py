@@ -32,7 +32,7 @@ indicator_df['Risk ID'] = indicator_df['Risk ID'].astype(str)
 # ========== COLOR SCHEME ==========
 color_map = {
     'Anthropic': '#da7756',
-    'Google DeepMind': '#4285F4',
+    'Google DeepMind': '#4285F4', 
     'Meta AI': '#34b3f0',
     'OpenAI': '#00A67E',
     'xAI': '#000000'
