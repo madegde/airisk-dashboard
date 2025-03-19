@@ -35,7 +35,7 @@ color_map = {
     'Google DeepMind': '#4285F4',
     'Meta AI': '#34b3f0',
     'OpenAI': '#00A67E',
-    'x.AI': '#000000'
+    'xAI': '#000000'
 }
 
 # ========== SIDEBAR ==========
